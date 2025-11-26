@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Sustainability Platform - Min Jiang | Product Manager</title>
+    <meta name="description" content="Transformed legacy ESG platform into AI-powered carbon intelligence system: $2M ARR, 15% revenue growth, 300+ Fortune 500 customers">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <style>
+        :root {
+            --primary: #7e22ce;
+            --primary-light: #a855f7;
+            --text-dark: #1e293b;
+            --text-medium: #475569;
+            --text-light: #64748b;
+            --bg-light: #ffffff;
+            --bg-gray: #f8fafc;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-gray);
+            color: var(--text-dark);
+            line-height: 1.7;
+            font-size: 18px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 20px 0;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .back-link {
+            background-color: var(--text-medium);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .back-link:hover {
+            background-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0 40px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+        }
+        
+        .hero-content {
+            text-align: center;
+        }
+        
+        .project-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+        
+        .project-meta {
+            font-size: 1rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        /* Key Metrics */
+        .key-metrics {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .metric-item {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.25);
+            padding: 20px 15px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .metric-item:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .metric-value {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 6px;
+            line-height: 1;
+        }
+        
+        .metric-label {
+            font-size: 0.8rem;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
+        /* Section Structure */
+        section {
+            padding: 50px 0;
+        }
+        
+        section:first-of-type {
+            padding-top: 25px;
+        }
+        
+        .section-content {
+            background: white;
+            border-radius: 16px;
+            padding: 40px 45px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+        }
+        
+        .section-label {
+            font-size: 0.95rem;
+            font-weight: 800;
+            letter-spacing: 3px;
+            color: var(--primary);
+            margin-bottom: 18px;
+            display: block;
+            text-transform: uppercase;
+        }
+        
+        .section-label::before {
+            content: '';
+            display: inline-block;
+            width: 45px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--primary-light));
+            margin-right: 14px;
+            vertical-align: middle;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 25px;
+            line-height: 1.25;
+            letter-spacing: -0.5px;
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+        
+        h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+        
+        p {
+            color: var(--text-medium);
+            margin-bottom: 16px;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+        
+        /* TL;DR Box */
+        .tldr-box {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 35px;
+            margin: 30px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+        }
+        
+        .tldr-box h3 {
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            margin: 0 0 25px 0;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .tldr-box h3 i {
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+        
+        .tldr-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+        
+        .tldr-item {
+            display: flex;
+            gap: 15px;
+            align-items: start;
+            padding: 18px;
+            background: var(--bg-gray);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .tldr-item:hover {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            transform: translateY(-2px);
+        }
+        
+        .tldr-item i {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        
+        .tldr-item strong {
+            display: block;
+            color: var(--text-dark);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        
+        .tldr-item span {
+            color: var(--text-medium);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        /* Story Cards */
+        .story-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+        }
+        
+        .story-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .story-card h4 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .story-card .highlight {
+            background: rgba(126, 34, 206, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .story-brief {
+            color: var(--text-medium);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+        
+        .story-impact {
+            background: linear-gradient(135deg, rgba(126, 34, 206, 0.05), rgba(168, 85, 247, 0.05));
+            padding: 12px 15px;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+            margin-top: 12px;
+        }
+        
+        .story-impact strong {
+            color: var(--primary);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: block;
+            margin-bottom: 6px;
+        }
+        
+        .story-impact p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            line-height: 1.5;
+        }
+        
+        /* Work Samples Grid */
+        .work-sample-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .work-sample-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            border-color: var(--primary);
+        }
+        
+        .work-sample-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .work-sample-content {
+            padding: 25px;
+        }
+        
+        .work-sample-tag {
+            display: inline-block;
+            background: rgba(126, 34, 206, 0.12);
+            color: var(--primary);
+            padding: 6px 14px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .work-sample-content h4 {
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        .work-sample-content p {
+            font-size: 0.95rem;
+            color: var(--text-medium);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* CTA Footer */
+        .cta-footer {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            padding: 60px 0;
+            text-align: center;
+            color: white;
+        }
+        
+        .cta-footer h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: white;
+        }
+        
+        .cta-footer p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            color: white;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-btn {
+            background: white;
+            color: var(--primary) !important;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+        
+        .cta-btn.secondary {
+            background: transparent;
+            color: white !important;
+            border: 2px solid white;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .project-title {
+                font-size: 1.8rem;
+            }
+            
+            .key-metrics {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .tldr-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index-pm.html" class="logo">Min Jiang</a>
+                <a href="index-pm.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Portfolio
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="project-title">AI-Powered Sustainability & Learning Platform</h1>
+                <p class="project-meta">UL Solutions | Software Product Manager | April 2022 - Present</p>
+                
+                <div class="key-metrics" data-aos="fade-up">
+                    <div class="metric-item">
+                        <div class="metric-value">$2M</div>
+                        <div class="metric-label">ARR Generated</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">15%</div>
+                        <div class="metric-label">Revenue Growth</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">300+</div>
+                        <div class="metric-label">Customers</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">95%</div>
+                        <div class="metric-label">Retention</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">$50M+</div>
+                        <div class="metric-label">Client Value</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section>
+        <div class="container">
+            <div class="section-content">
+                <span class="section-label">TL;DR</span>
+                
+                <div class="tldr-box">
+                    <h3><i class="fas fa-bolt"></i> Challenge → Solution → Impact</h3>
+                    <div class="tldr-grid">
+                        <div class="tldr-item">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <div>
+                                <strong>Problem</strong>
+                                <span>Legacy ESG platform, 280+ customers at churn risk, manual workflows, zero predictive insights</span>
+                            </div>
+                        </div>
+                        <div class="tldr-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <strong>Solution</strong>
+                                <span>AI intelligence layer: Scope 3 analytics, SBTi prediction, out-of-box deployment, 90% automation</span>
+                            </div>
+                        </div>
+                        <div class="tldr-item">
+                            <i class="fas fa-rocket"></i>
+                            <div>
+                                <strong>Business Impact</strong>
+                                <span>$2M ARR, 15% growth, 95% retention, $8.3M pipeline, 22+ weeks saved per migration</span>
+                            </div>
+                        </div>
+                        <div class="tldr-item">
+                            <i class="fas fa-chart-line"></i>
+                            <div>
+                                <strong>Customer Value</strong>
+                                <span>$50M+ decarbonization opportunities, 95% compliance accuracy, 83% faster setup (6w → 1w)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Samples Section -->
+    <section>
+        <div class="container">
+            <div class="section-content">
+                <span class="section-label">WORK SAMPLES</span>
+                <h2>What I Built & Delivered</h2>
+                <p style="margin-bottom: 30px; color: var(--text-medium);">Visual examples of AI-powered sustainability and learning platform solutions</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; margin-bottom: 40px;">
+                    <!-- UL Solutions Platform -->
+                    <div class="work-sample-item" data-aos="fade-up">
+                        <img src="UL.png" alt="UL Solutions Sustainability Platform" class="work-sample-image">
+                        <div class="work-sample-content">
+                            <span class="work-sample-tag">Product Platform</span>
+                            <h4>Enterprise Sustainability & Learning Platform</h4>
+                            <p>AI-powered platform serving 300+ global customers with GHG emissions tracking, ESG reporting, and compliance learning modules</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Visual -->
+                    <div class="work-sample-item" data-aos="fade-up" data-aos-delay="100">
+                        <img src="timeline.svg" alt="Product Roadmap Timeline" class="work-sample-image" style="background: #f8fafc;">
+                        <div class="work-sample-content">
+                            <span class="work-sample-tag">Product Roadmap</span>
+                            <h4>Migration & Feature Delivery Timeline</h4>
+                            <p>Phased approach balancing quick wins (out-of-box modules) with strategic bets (AI analytics, SSO)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discovery & Strategy Section -->
+    <section>
+        <div class="container">
+            <div class="section-content">
+                <span class="section-label">DISCOVERY & RESEARCH</span>
+                <h2>Customer-Driven Product Strategy</h2>
+                
+                <div class="story-card">
+                    <h4><i class="fas fa-search"></i> Discovery: <span class="highlight">58 Interviews + SQL Analysis</span></h4>
+                    <p class="story-brief">
+                        Interviewed CSOs/ESG analysts at 300+ F500 customers • Ran SQL on 280+ legacy accounts for migration readiness • Competitive analysis (Watershed, Persefoni)
+                    </p>
+                    <div class="story-impact">
+                        <strong>Insight</strong>
+                        <p><strong>Scope 3 Category 1</strong> (60-80% emissions) = #1 pain, zero support. Needed <strong>"Where to cut carbon?"</strong> not <strong>"What's our footprint?"</strong></p>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <h4><i class="fas fa-chess"></i> Strategy: <span class="highlight">3-Pillar Framework</span></h4>
+                    <p class="story-brief">
+                        <strong>AI Intelligence</strong> → Scope 3, SBTi prediction, ML hotspots<br>
+                        <strong>Migration</strong> → $8.3M pipeline, readiness segmentation, SSO<br>
+                        <strong>Ops Excellence</strong> → Out-of-box templates, 90% automation
+                    </p>
+                    <div class="story-impact">
+                        <strong>Outcome</strong>
+                        <p>Secured <strong>$5.8M budget</strong> via ROI: $12M churn risk, 22+ weeks saved, 300% capacity gain</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Execution & Impact Section -->
+    <section>
+        <div class="container">
+            <div class="section-content">
+                <span class="section-label">EXECUTION & DELIVERY</span>
+                <h2>What I Shipped</h2>
+                
+                <!-- Work Examples Grid -->
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; margin-bottom: 40px;">
+                    <!-- Example 1 - Add your screenshot -->
+                    <div class="work-sample-item" data-aos="fade-up">
+                        <div class="work-sample-image" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); display: flex; align-items: center; justify-content: center; color: #94a3b8; font-size: 3rem;">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="work-sample-content">
+                            <span class="work-sample-tag">AI Analytics</span>
+                            <h4>Scope 3 Carbon Intelligence Module</h4>
+                            <p>ML-powered supplier hotspot identification with SBTi prediction and decarbonization recommendations</p>
+                        </div>
+                    </div>
+
+                    <!-- Example 2 - Add your screenshot -->
+                    <div class="work-sample-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="work-sample-image" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); display: flex; align-items: center; justify-content: center; color: #94a3b8; font-size: 3rem;">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="work-sample-content">
+                            <span class="work-sample-tag">Predictive Dashboard</span>
+                            <h4>Real-Time GHG Performance Forecasting</h4>
+                            <p>Predictive analytics against Science-Based Targets with automated emissions rollups by facility/region/BU</p>
+                        </div>
+                    </div>
+
+                    <!-- Example 3 - Add your screenshot -->
+                    <div class="work-sample-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="work-sample-image" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); display: flex; align-items: center; justify-content: center; color: #94a3b8; font-size: 3rem;">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="work-sample-content">
+                            <span class="work-sample-tag">Deployment Solution</span>
+                            <h4>Out-of-Box Configuration Templates</h4>
+                            <p>Pre-configured sustainability & learning modules reducing implementation from 4-6 weeks to 1 week</p>
+                        </div>
+                    </div>
+
+                    <!-- Example 4 - Add your screenshot -->
+                    <div class="work-sample-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="work-sample-image" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); display: flex; align-items: center; justify-content: center; color: #94a3b8; font-size: 3rem;">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="work-sample-content">
+                            <span class="work-sample-tag">Enterprise Features</span>
+                            <h4>SSO & Data Migration Tools</h4>
+                            <p>Enterprise security integrations and automated data validation unlocking 40% of migration pipeline</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story Cards -->
+                <div class="story-card">
+                    <h4><i class="fas fa-cogs"></i> Cross-Functional Execution</h4>
+                    <p class="story-brief">
+                        Led 15 engineers + 3 ML engineers + 7-person implementation team • Sprint planning, technical specs, release management • Trained ML models on 2M+ emissions data → <strong>95% compliance accuracy</strong>
+                    </p>
+                </div>
+
+                <div class="story-card">
+                    <h4><i class="fas fa-fire"></i> Problem Solved</h4>
+                    <p class="story-brief">
+                        Learning division needed separate instance urgently (eng ETA: 1 month) • Identified bottleneck (data segregation ≠ DB duplication) • Proposed phased delivery → <strong>shipped in 1 week</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section>
+        <div class="container">
+            <div class="section-content">
+                <span class="section-label">MEASURABLE RESULTS</span>
+                <h2>Business Impact</h2>
+                
+                <div class="tldr-box">
+                    <h3><i class="fas fa-trophy"></i> Key Metrics</h3>
+                    <div class="tldr-grid">
+                        <div class="tldr-item">
+                            <i class="fas fa-dollar-sign"></i>
+                            <div>
+                                <strong>$2M ARR Generated</strong>
+                                <span>Through AI feature releases and migration pipeline conversion with 15% YoY revenue growth</span>
+                            </div>
+                        </div>
+                        <div class="tldr-item">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <strong>$8.3M Migration Pipeline</strong>
+                                <span>Created via strategic segmentation with 95% retention rate and 22+ weeks saved per enterprise customer</span>
+                            </div>
+                        </div>
+                        <div class="tldr-item">
+                            <i class="fas fa-leaf"></i>
+                            <div>
+                                <strong>$50M+ Client Value</strong>
+                                <span>Decarbonization opportunities identified through AI hotspot analysis and SBTi prediction</span>
+                            </div>
+                        </div>
+                        <div class="tldr-item">
+                            <i class="fas fa-rocket"></i>
+                            <div>
+                                <strong>83% Faster Deployments</strong>
+                                <span>Setup time reduced from 4-6 weeks to 1 week with 300% implementation capacity increase</span>
+                            </div>
+                        </div>
+                        <div class="tldr-item">
+                            <i class="fas fa-chart-line"></i>
+                            <div>
+                                <strong>95% Compliance Accuracy</strong>
+                                <span>CDP and GHG Protocol reporting via ML models trained on 2M+ emission data points</span>
+                            </div>
+                        </div>
+                        <div class="tldr-item">
+                            <i class="fas fa-smile"></i>
+                            <div>
+                                <strong>85% Fewer Escalations</strong>
+                                <span>Customer escalations eliminated with 30% OSAT improvement through out-of-box solutions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 style="margin: 40px 0 20px;">PM Skills</h3>
+                <p style="margin-bottom: 8px;"><strong>✓ Discovery:</strong> 58 interviews, SQL analysis, competitive benchmarking</p>
+                <p style="margin-bottom: 8px;"><strong>✓ Strategy:</strong> 3-pillar framework, Impact-Effort prioritization, $5.8M budget secured</p>
+                <p style="margin-bottom: 8px;"><strong>✓ Stakeholder Management:</strong> Cross-functional alignment (eng, sales, implementation)</p>
+                <p style="margin-bottom: 8px;"><strong>✓ Execution:</strong> 0→1 launches (Scope 3, SBTi prediction, out-of-box deployment)</p>
+                <p><strong>✓ Data-Driven:</strong> Migration segmentation, ROI modeling, usage analytics</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Footer -->
+    <section class="cta-footer">
+        <div class="container">
+            <h2>Want to Discuss This Case Study?</h2>
+            <p>Happy to dive deeper into product strategy, AI integration, or migration planning.</p>
+            <div class="cta-buttons">
+                <a href="index-pm.html" class="cta-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Portfolio
+                </a>
+                <a href="index-pm.html#contact" class="cta-btn secondary">
+                    <i class="fas fa-envelope"></i>
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AOS Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease',
+            once: true
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Jiang | Data-Driven Product Manager - Sustainability & Learning</title>
+    <meta name="description" content="Min Jiang - Data-Driven Product Manager helping organizations measure sustainability impact and scale employee training. 8+ years launching AI-powered enterprise products for Fortune 500 companies worldwide.">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS (Animate On Scroll) Library for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <style>
+        :root {
+            --primary: #7e22ce;
+            --primary-light: #a855f7;
+            --secondary: #475569;
+            --light: #f8fafc;
+            --dark: #1e293b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        /* No banner - standalone PM portfolio */
+
+        /* Content icon styles */
+        .content-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .content-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .context-icon {
+            background: linear-gradient(135deg, #6366f1, #4338ca);
+        }
+
+        .challenge-icon {
+            background:  linear-gradient(135deg, #6366f1, #4338ca);
+        }
+
+        .action-icon {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+        }
+
+        .win-icon {
+            background: linear-gradient(135deg, #10b981, #059669);
+        }
+
+        .content-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin: 0;
+        }
+
+        .content-icon i {
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1;
+        }
+
+        .fas, .far, .fab {
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+        }
+
+        .stakeholder-quote {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            border-left: 4px solid var(--primary);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .stakeholder-quote blockquote {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--dark);
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .stakeholder-quote cite {
+            font-size: 0.9rem;
+            color: var(--secondary);
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .strategy-framework {
+            background: rgba(126, 34, 206, 0.05);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+
+        .strategy-framework h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .strategy-framework ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .strategy-framework li {
+            padding: 5px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--secondary);
+        }
+
+        .strategy-framework li::before {
+            content: "⚡";
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .team-collaboration {
+            background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+            border: 1px solid #3b82f6;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+
+        .team-collaboration h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .team-collaboration p {
+            color: var(--secondary);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .learn-more-btn {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 12px rgba(126, 34, 206, 0.2);
+            margin-top: 12px;
+            width: fit-content;
+            max-width: 140px;
+        }
+
+        .learn-more-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 18px rgba(126, 34, 206, 0.3);
+            color: white;
+        }
+
+        .learn-more-btn i {
+            transition: transform 0.3s ease;
+            font-size: 0.8rem;
+        }
+
+        .learn-more-btn:hover i {
+            transform: translateX(3px);
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: var(--dark);
+            font-weight: 500;
+        }
+        
+        .cta-button {
+            background-color: var(--primary);
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 140px 0 80px;
+            background: linear-gradient(135deg, #f8fafc 0%, #f3e8ff 100%);
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+        }
+        
+        .hero-text {
+            flex: 0 0 58%;
+        }
+        
+        .hero-image {
+            flex: 0 0 38%;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .hero-image img {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 5px solid white;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        h1 span {
+            color: var(--primary);
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            color: var(--secondary);
+        }
+        
+        .metrics {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        
+        .metric {
+            margin-right: 30px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .metric:hover {
+            transform: translateY(-5px);
+        }
+        
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .metric-value::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary-light);
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.5s ease;
+        }
+        
+        .metric:hover .metric-value::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        
+        .counter-animation {
+            display: inline-block;
+        }
+        
+        /* Section Common */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .content-header {
+                gap: 15px;
+                margin-bottom: 20px;
+            }
+            
+            .content-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+            
+            .content-title {
+                font-size: 1.6rem;
+            }
+
+            .learn-more-btn {
+                padding: 6px 14px;
+                font-size: 0.8rem;
+                gap: 6px;
+                margin-top: 10px;
+                max-width: 120px;
+            }
+            
+            .learn-more-btn i {
+                font-size: 0.75rem;
+            }
+
+            .hero-image img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .learn-more-btn {
+                padding: 5px 12px;
+                font-size: 0.75rem;
+                max-width: 110px;
+            }
+        }
+
+        .project-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Min Jiang</div>
+                <ul class="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#testimonials">Impact</a></li>
+                    <li><a href="#story">My Story</a></li>
+                    <li><a href="#projects">Portfolio</a></li>
+                    <li><a href="#beyond">Beyond Work</a></li>
+                    <li><a href="#contact" class="cta-button">Let's chat</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section - PM FOCUSED -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Data-Driven Product Manager for <span>Sustainability & Learning</span></h1>
+                <p>I build AI-powered products for enterprise Fortune 500 companies worldwide, helping organizations measure sustainability impact and scale employee training. 8 years defining product strategy for sustainability platforms and learning management systems. Expert in discovery, roadmap planning, and translating customer needs into products that drive business outcomes. I lead with empathy, execute with data, and ship with impact.</p>
+                <a href="#projects" class="cta-button">See My Products</a>
+                
+                <div class="metrics">
+                    <div class="metric" data-aos="fade-up" data-aos-delay="100">
+                        <div class="metric-value">
+                            <span class="counter-animation">4</span>
+                        </div>
+                        <div class="metric-name">Products Launched 0→1</div>
+                    </div>
+                    <div class="metric" data-aos="fade-up" data-aos-delay="200">
+                        <div class="metric-value">
+                            <span class="counter-animation">200</span>+
+                        </div>
+                        <div class="metric-name">Enterprise Customers</div>
+                    </div>
+                    <div class="metric" data-aos="fade-up" data-aos-delay="300">
+                        <div class="metric-value">
+                            <span class="counter-animation">58</span>+
+                        </div>
+                        <div class="metric-name">User Interviews Conducted</div>
+                    </div>
+                    <div class="metric" data-aos="fade-up" data-aos-delay="400">
+                        <div class="metric-value">
+                            <span class="counter-animation">85</span>%
+                        </div>
+                        <div class="metric-name">Customer Adoption Rate</div>
+                    </div>
+                    <div class="metric" data-aos="fade-up" data-aos-delay="500">
+                        <div class="metric-value">
+                            <span class="counter-animation">8</span>+
+                        </div>
+                        <div class="metric-name">Years Product Leadership</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="zoom-in">
+                <img src="Min.jpg" alt="Min Jiang - Product Manager">
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact & Recognition Section - PM FOCUSED -->
+    <section id="testimonials" class="section testimonials-section" style="background: #f8fafc; padding: 70px 0;">
+        <style>
+            .testimonials-section {
+                background: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #f3e8ff 100%);
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .testimonials-section::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 400px;
+                height: 400px;
+                background: radial-gradient(circle, rgba(126, 34, 206, 0.02) 0%, transparent 70%);
+                border-radius: 50%;
+            }
+
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            
+            .testimonial-slide {
+                display: none;
+                animation: fadeIn 0.6s ease-in;
+            }
+            
+            .testimonial-slide.active {
+                display: block !important;
+            }
+            
+            .testimonial-dot:hover {
+                background: #a855f7 !important;
+                transform: scale(1.2);
+            }
+            
+            .testimonial-dot.active {
+                background: #7e22ce !important;
+                width: 32px !important;
+                border-radius: 6px !important;
+            }
+            
+            button[onclick^="changeTestimonial"]:hover {
+                background: #7e22ce !important;
+                color: white !important;
+                border-color: #7e22ce !important;
+                transform: translateY(-50%) scale(1.1);
+            }
+        </style>
+
+        <div class="container">
+            <div class="section-title">
+                <h2>Product Impact & Recognition</h2>
+                <p style="font-size: 1.05rem; max-width: 700px; margin: 0 auto; color: var(--secondary);">Real feedback from executives, customers, and cross-functional teams</p>
+            </div>
+            
+            <!-- Rotating Testimonial Carousel -->
+            <div style="position: relative; max-width: 900px; margin: 50px auto 0;">
+                
+                <!-- Testimonial 1: Marian Carr - PRODUCT CONTEXT -->
+                <div class="testimonial-slide" style="display: block;">
+                    <div style="background: white; padding: 50px; border-radius: 12px; box-shadow: 0 2px 20px rgba(0,0,0,0.08); text-align: center;">
+                        <!-- Avatar Image -->
+                        <div style="margin: 0 auto 30px; width: 100px; height: 100px; border-radius: 50%; overflow: hidden; border: 4px solid #10b981; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);">
+                            <img src="Marian.jpg" alt="Marian Carr" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        
+                        <!-- Quote -->
+                        <p style="font-size: 1.3rem; line-height: 1.8; color: var(--dark); margin: 0 0 30px 0; font-style: italic; max-width: 700px; margin-left: auto; margin-right: auto;">
+                            "Min did an <strong>outstanding job</strong> today... I am positive her great work was very impressive to our visitors and <strong>made Locus look very good</strong>."
+                        </p>
+                        
+                        <!-- Person Info -->
+                        <h4 style="font-size: 1.15rem; font-weight: 700; color: var(--dark); margin: 0 0 8px 0;">Marian Carr</h4>
+                        <p style="margin: 0 0 20px 0; color: var(--secondary); font-size: 1rem;">Senior Vice President, Locus Technologies</p>
+                        
+                        <!-- Impact Badge -->
+                        <div style="display: inline-block; padding: 8px 18px; background: linear-gradient(135deg, #7e22ce, #a855f7); color: white; border-radius: 20px; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(126, 34, 206, 0.3);">
+                            <i class="fas fa-star" style="margin-right: 6px;"></i>IMPACT: Product Demo to Fortune 500 Executives
+                        </div>
+                        
+                        <!-- Context -->
+                        <div style="padding: 18px; background: #f0fdf4; border-left: 3px solid #10b981; border-radius: 6px; max-width: 600px; margin: 0 auto 25px;">
+                            <p style="margin: 0; font-size: 0.95rem; color: var(--secondary); line-height: 1.6; text-align: left;">
+                                <strong style="color: #059669;">Product Context:</strong> Presented carbon data product vision and roadmap to Fortune 500 prospect's executive team, securing enterprise partnership
+                            </p>
+                        </div>
+                        
+                        <!-- Skills -->
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                            <span style="background: #e0e7ff; color: #4338ca; padding: 8px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Product Vision</span>
+                            <span style="background: #e0e7ff; color: #4338ca; padding: 8px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Executive Communication</span>
+                            <span style="background: #e0e7ff; color: #4338ca; padding: 8px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Enterprise Sales Support</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2: VP Product Strategy - PRODUCT CONTEXT -->
+                <div class="testimonial-slide">
+                    <div style="background: white; padding: 50px; border-radius: 12px; box-shadow: 0 2px 20px rgba(0,0,0,0.08); text-align: center;">
+                        <!-- Avatar Image -->
+                        <div style="margin: 0 auto 30px; width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, #3b82f6, #2563eb); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: 700; border: 4px solid #3b82f6; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);">
+                            VP
+                        </div>
+                        
+                        <!-- Quote -->
+                        <p style="font-size: 1.3rem; line-height: 1.8; color: var(--dark); margin: 0 0 30px 0; font-style: italic; max-width: 700px; margin-left: auto; margin-right: auto;">
+                            "Min presented strategic insights and asked <strong>compelling questions</strong> that shaped our product roadmap. Her analytical approach helped us <strong>prioritize high-impact initiatives</strong> for maximum business value."
+                        </p>
+                        
+                        <!-- Person Info -->
+                        <h4 style="font-size: 1.15rem; font-weight: 700; color: var(--dark); margin: 0 0 8px 0;">VP Product Strategy</h4>
+                        <p style="margin: 0 0 20px 0; color: var(--secondary); font-size: 1rem;">Quarterly Planning Session, UL Solutions</p>
+                        
+                        <!-- Impact Badge -->
+                        <div style="display: inline-block; padding: 8px 18px; background: linear-gradient(135deg, #7e22ce, #a855f7); color: white; border-radius: 20px; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(126, 34, 206, 0.3);">
+                            <i class="fas fa-star" style="margin-right: 6px;"></i>IMPACT: Shaped Product Roadmap Strategy
+                        </div>
+                        
+                        <!-- Context -->
+                        <div style="padding: 18px; background: #eff6ff; border-left: 3px solid #3b82f6; border-radius: 6px; max-width: 600px; margin: 0 auto 25px;">
+                            <p style="margin: 0; font-size: 0.95rem; color: var(--secondary); line-height: 1.6; text-align: left;">
+                                <strong style="color: #2563eb;">Product Context:</strong> Led quarterly product strategy session with VP and cross-functional leaders to define H2 product priorities based on customer insights
+                            </p>
+                        </div>
+                        
+                        <!-- Skills -->
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                            <span style="background: #e0e7ff; color: #4338ca; padding: 8px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Product Strategy</span>
+                            <span style="background: #e0e7ff; color: #4338ca; padding: 8px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Roadmap Planning</span>
+                            <span style="background: #e0e7ff; color: #4338ca; padding: 8px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Stakeholder Alignment</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3: Enterprise Customer - PRODUCT CONTEXT -->
+                <div class="testimonial-slide">
+                    <div style="background: white; padding: 50px; border-radius: 12px; box-shadow: 0 2px 20px rgba(0,0,0,0.08); text-align: center;">
+                        <!-- Avatar Image -->
+                        <div style="margin: 0 auto 30px; width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, #10b981, #059669); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: 700; border: 4px solid #10b981; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);">
+                            EC
+                        </div>
+                        
+                        <!-- Quote -->
+                        <p style="font-size: 1.3rem; line-height: 1.8; color: var(--dark); margin: 0 0 30px 0; font-style: italic; max-width: 700px; margin-left: auto; margin-right: auto;">
+                            "Min <strong>quickly built a demo dashboard</strong> during training that was remarkably close to our requirements. Her ability to <strong>rapidly translate needs into working solutions</strong> was impressive."
+                        </p>
+                        
+                        <!-- Person Info -->
+                        <h4 style="font-size: 1.15rem; font-weight: 700; color: var(--dark); margin: 0 0 8px 0;">Enterprise Customer</h4>
+                        <p style="margin: 0 0 20px 0; color: var(--secondary); font-size: 1rem;">Customer Discovery Session, Locus Technologies</p>
+                        
+                        <!-- Impact Badge -->
+                        <div style="display: inline-block; padding: 8px 18px; background: linear-gradient(135deg, #7e22ce, #a855f7); color: white; border-radius: 20px; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(126, 34, 206, 0.3);">
+                            <i class="fas fa-star" style="margin-right: 6px;"></i>IMPACT: Rapid Customer-Driven Prototyping
+                        </div>
+                        
+                        <!-- Context -->
+                        <div style="padding: 18px; background: #f0fdf4; border-left: 3px solid #10b981; border-radius: 6px; max-width: 600px; margin: 0 auto 25px;">
+                            <p style="margin: 0; font-size: 0.95rem; color: var(--secondary); line-height: 1.6; text-align: left;">
+                                <strong style="color: #059669;">Product Context:</strong> Conducted on-site customer discovery and built working product prototype based on user feedback in real-time
+                            </p>
+                        </div>
+                        
+                        <!-- Skills -->
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                            <span style="background: #e0e7ff; color: #4338ca; padding: 8px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">User Research</span>
+                            <span style="background: #e0e7ff; color: #4338ca; padding: 8px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Rapid Prototyping</span>
+                            <span style="background: #e0e7ff; color: #4338ca; padding: 8px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Customer Empathy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4: Jennifer Peterson - PRODUCT CONTEXT -->
+                <div class="testimonial-slide">
+                    <div style="background: white; padding: 50px; border-radius: 12px; box-shadow: 0 2px 20px rgba(0,0,0,0.08); text-align: center;">
+                        <!-- Avatar Image -->
+                        <div style="margin: 0 auto 30px; width: 100px; height: 100px; border-radius: 50%; overflow: hidden; border: 4px solid #10b981; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);">
+                            <img src="Jennifer.jpg" alt="Jennifer Peterson" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        
+                        <!-- Quote -->
+                        <p style="font-size: 1.3rem; line-height: 1.8; color: var(--dark); margin: 0 0 30px 0; font-style: italic; max-width: 700px; margin-left: auto; margin-right: auto;">
+                            "Thanks so much for <strong>pushing this through and helping the customer out</strong>. They will no doubt appreciate your efforts."
+                        </p>
+                        
+                        <!-- Person Info -->
+                        <h4 style="font-size: 1.15rem; font-weight: 700; color: var(--dark); margin: 0 0 8px 0;">Jennifer Peterson</h4>
+                        <p style="margin: 0 0 20px 0; color: var(--secondary); font-size: 1rem;">VP of Commercial Project Management, Locus Technologies</p>
+                        
+                        <!-- Impact Badge -->
+                        <div style="display: inline-block; padding: 8px 18px; background: linear-gradient(135deg, #7e22ce, #a855f7); color: white; border-radius: 20px; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(126, 34, 206, 0.3);">
+                            <i class="fas fa-star" style="margin-right: 6px;"></i>IMPACT: Customer Success Under Pressure
+                        </div>
+                        
+                        <!-- Context -->
+                        <div style="padding: 18px; background: #f0fdf4; border-left: 3px solid #10b981; border-radius: 6px; max-width: 600px; margin: 0 auto 25px;">
+                            <p style="margin: 0; font-size: 0.95rem; color: var(--secondary); line-height: 1.6; text-align: left;">
+                                <strong style="color: #059669;">Product Context:</strong> Orchestrated cross-functional product delivery to meet critical customer deadline, ensuring successful product launch
+                            </p>
+                        </div>
+                        
+                        <!-- Skills -->
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                            <span style="background: #e0e7ff; color: #4338ca; padding: 8px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Product Delivery</span>
+                            <span style="background: #e0e7ff; color: #4338ca; padding: 8px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Customer-Centric</span>
+                            <span style="background: #e0e7ff; color: #4338ca; padding: 8px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Cross-Functional Leadership</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Dots -->
+                <div style="display: flex; justify-content: center; gap: 12px; margin-top: 35px;">
+                    <button class="testimonial-dot active" onclick="currentTestimonial(0)" style="width: 12px; height: 12px; border-radius: 50%; border: none; background: #7e22ce; cursor: pointer; transition: all 0.3s;"></button>
+                    <button class="testimonial-dot" onclick="currentTestimonial(1)" style="width: 12px; height: 12px; border-radius: 50%; border: none; background: #cbd5e1; cursor: pointer; transition: all 0.3s;"></button>
+                    <button class="testimonial-dot" onclick="currentTestimonial(2)" style="width: 12px; height: 12px; border-radius: 50%; border: none; background: #cbd5e1; cursor: pointer; transition: all 0.3s;"></button>
+                    <button class="testimonial-dot" onclick="currentTestimonial(3)" style="width: 12px; height: 12px; border-radius: 50%; border: none; background: #cbd5e1; cursor: pointer; transition: all 0.3s;"></button>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <button onclick="changeTestimonial(-1)" style="position: absolute; left: -60px; top: 50%; transform: translateY(-50%); background: white; border: 2px solid #e2e8f0; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #64748b; transition: all 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button onclick="changeTestimonial(1)" style="position: absolute; right: -60px; top: 50%; transform: translateY(-50%); background: white; border: 2px solid #e2e8f0; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #64748b; transition: all 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <script>
+            // Testimonial carousel
+            (function() {
+                let currentSlide = 0;
+                const slides = document.querySelectorAll('.testimonial-slide');
+                const dots = document.querySelectorAll('.testimonial-dot');
+                let autoPlayInterval;
+
+                function showSlide(n) {
+                    if (slides.length === 0) return;
+                    
+                    if (n >= slides.length) currentSlide = 0;
+                    else if (n < 0) currentSlide = slides.length - 1;
+                    else currentSlide = n;
+
+                    slides.forEach((slide, i) => {
+                        slide.style.display = (i === currentSlide) ? 'block' : 'none';
+                    });
+
+                    dots.forEach((dot, i) => {
+                        if (i === currentSlide) {
+                            dot.style.background = '#7e22ce';
+                            dot.style.width = '32px';
+                            dot.style.borderRadius = '6px';
+                        } else {
+                            dot.style.background = '#cbd5e1';
+                            dot.style.width = '12px';
+                            dot.style.borderRadius = '50%';
+                        }
+                    });
+                }
+
+                window.changeTestimonial = function(dir) {
+                    showSlide(currentSlide + dir);
+                    clearInterval(autoPlayInterval);
+                    autoPlayInterval = setInterval(() => showSlide(currentSlide + 1), 6000);
+                };
+
+                window.currentTestimonial = function(n) {
+                    showSlide(n);
+                    clearInterval(autoPlayInterval);
+                    autoPlayInterval = setInterval(() => showSlide(currentSlide + 1), 6000);
+                };
+
+                showSlide(0);
+                autoPlayInterval = setInterval(() => showSlide(currentSlide + 1), 6000);
+            })();
+        </script>
+    </section>
+
+    <!-- Product Journey Section - PM FOCUSED -->
+    <section id="story" class="section" style="background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 50%, #f3e8ff 100%); padding: 80px 0;">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Product Journey</h2>
+                <p style="font-size: 1.1rem; color: var(--secondary); max-width: 800px; margin: 0 auto;">From identifying customer problems to launching products that scale globally</p>
+            </div>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <!-- Story Card -->
+                <div style="background: white; border-radius: 16px; padding: 50px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); position: relative; overflow: hidden;">
+                    
+                    <!-- Decorative Element -->
+                    <div style="position: absolute; top: 0; right: 0; width: 200px; height: 200px; background: radial-gradient(circle, rgba(126, 34, 206, 0.05) 0%, transparent 70%); border-radius: 50%;"></div>
+                    
+                    <!-- Story Content -->
+                    <div style="position: relative; z-index: 1;">
+                        
+                        <!-- Chapter 1: Discovery -->
+                        <div style="margin-bottom: 50px;">
+                            <div style="display: flex; flex-direction: column; gap: 25px;">
+                                <!-- Image -->
+                                <div style="width: 100%; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                                    <img src="iubplant.jpg" alt="Customer Discovery" style="width: 100%; height: 280px; object-fit: cover;">
+                                </div>
+                                <!-- Content -->
+                                <div>
+                                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                                        <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #10b981, #059669); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                            <i class="fas fa-lightbulb" style="color: white; font-size: 1.3rem;"></i>
+                                        </div>
+                                        <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--dark); margin: 0;">It Started with a Customer Problem</h3>
+                                    </div>
+                                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--secondary);">
+                                        My product journey began by <strong style="color: var(--dark);">observing real users struggle with emissions measurement</strong>. Working at a heating plant, I saw firsthand how organizations needed better tools to track, analyze, and reduce their carbon footprint. This customer empathy became the foundation of my product thinking — <strong style="color: var(--primary);">always start with the problem, not the solution</strong>.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Chapter 2: Research & Validation -->
+                        <div style="margin-bottom: 50px;">
+                            <div style="display: flex; flex-direction: column; gap: 25px;">
+                                <!-- Image -->
+                                <div style="width: 100%; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                                    <img src="IUB lab photo.jpg" alt="Product Research" style="width: 100%; height: 280px; object-fit: cover;">
+                                </div>
+                                <!-- Content -->
+                                <div>
+                                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                                        <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #3b82f6, #2563eb); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                            <i class="fas fa-search" style="color: white; font-size: 1.3rem;"></i>
+                                        </div>
+                                        <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--dark); margin: 0;">Deep Customer Research</h3>
+                                    </div>
+                                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--secondary);">
+                                        I invested years conducting <strong style="color: var(--dark);">user research and market validation</strong> — through atmospheric chemistry research and regulatory work, I learned how different stakeholders (scientists, engineers, compliance teams) approached environmental data. This taught me to <strong style="color: var(--primary);">design for diverse user personas</strong> and validate assumptions with data.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Chapter 3: Building Products at Scale -->
+                        <div style="margin-bottom: 50px;">
+                            <div style="display: flex; flex-direction: column; gap: 25px;">
+                                <!-- Split Image Section for Two Companies -->
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                    <!-- Locus Technologies -->
+                                    <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); background: linear-gradient(135deg, #10b981, #059669); padding: 15px; position: relative;">
+                                        <div style="background: white; border-radius: 8px; padding: 20px; height: 200px; display: flex; align-items: center; justify-content: center;">
+                                            <img src="Locus Applications.jpg" alt="Locus Technologies" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                                        </div>
+                                        <div style="position: absolute; top: 15px; left: 15px; background: rgba(255,255,255,0.95); padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; color: #059669;">
+                                            0→1 Product Launches
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- UL Solutions -->
+                                    <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); background: linear-gradient(135deg, #3b82f6, #2563eb); padding: 15px; position: relative;">
+                                        <div style="background: white; border-radius: 8px; padding: 20px; height: 200px; display: flex; align-items: center; justify-content: center;">
+                                            <img src="UL.png" alt="UL Solutions" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                                        </div>
+                                        <div style="position: absolute; top: 15px; left: 15px; background: rgba(255,255,255,0.95); padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; color: #2563eb;">
+                                            Enterprise Scale
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Content -->
+                                <div>
+                                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                                        <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, #f59e0b, #d97706); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                            <i class="fas fa-rocket" style="color: white; font-size: 1.3rem;"></i>
+                                        </div>
+                                        <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--dark); margin: 0;">Launching & Scaling Products</h3>
+                                    </div>
+                                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--secondary); margin-bottom: 15px;">
+                                        At <strong style="color: #10b981;">Locus Technologies</strong>, I launched <strong style="color: var(--dark);">4 carbon compliance products from 0→1</strong> — defining product vision, conducting 58+ customer interviews, building roadmaps, and coordinating cross-functional teams. I learned to ship fast, iterate based on feedback, and drive adoption through customer success partnerships.
+                                    </p>
+                                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--secondary);">
+                                        Now at <strong style="color: #3b82f6;">UL Solutions</strong>, I own product strategy for <strong style="color: var(--dark);">AI-powered sustainability platforms serving Fortune 500 companies</strong> — managing product roadmaps, aligning stakeholders across engineering/sales/marketing, and driving business outcomes through data-driven decision making.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- The Product Philosophy -->
+                        <div style="background: linear-gradient(135deg, rgba(126, 34, 206, 0.05), rgba(168, 85, 247, 0.05)); border-left: 4px solid var(--primary); border-radius: 8px; padding: 30px; margin-top: 50px;">
+                            <div style="display: flex; align-items: flex-start; gap: 20px;">
+                                <div style="flex-shrink: 0;">
+                                    <i class="fas fa-quote-left" style="font-size: 2rem; color: var(--primary); opacity: 0.3;"></i>
+                                </div>
+                                <div>
+                                    <p style="font-size: 1.2rem; line-height: 1.8; color: var(--dark); font-style: italic; margin: 0;">
+                                        My product philosophy: <strong style="color: var(--primary);">Start with customer pain, validate with data, ship iteratively, and measure impact</strong>. The best products solve real problems for real people — everything else is noise.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Key Product Skills -->
+                        <div style="margin-top: 40px;">
+                            <h4 style="font-size: 1.2rem; font-weight: 700; color: var(--dark); margin-bottom: 20px; text-align: center;">My Product Toolkit</h4>
+                            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                                <div style="text-align: center; padding: 20px; background: #f0fdf4; border-radius: 8px;">
+                                    <i class="fas fa-users" style="font-size: 1.8rem; color: #10b981; margin-bottom: 10px;"></i>
+                                    <p style="font-size: 0.95rem; font-weight: 600; color: var(--dark); margin: 0;">User Research & Discovery</p>
+                                </div>
+                                <div style="text-align: center; padding: 20px; background: #eff6ff; border-radius: 8px;">
+                                    <i class="fas fa-chart-line" style="font-size: 1.8rem; color: #3b82f6; margin-bottom: 10px;"></i>
+                                    <p style="font-size: 0.95rem; font-weight: 600; color: var(--dark); margin: 0;">Data-Driven Roadmaps</p>
+                                </div>
+                                <div style="text-align: center; padding: 20px; background: #f5f3ff; border-radius: 8px;">
+                                    <i class="fas fa-rocket" style="font-size: 1.8rem; color: #7e22ce; margin-bottom: 10px;"></i>
+                                    <p style="font-size: 0.95rem; font-weight: 600; color: var(--dark); margin: 0;">0→1 Product Launches</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section - PM FOCUSED -->
+    <section id="projects" class="section projects-section">
+        <style>
+            .projects-section {
+                background-color: white;
+            }
+            
+            .projects-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+            
+            .project-card {
+                background-color: #f8fafc;
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 6px 25px rgba(0,0,0,0.06);
+                transition: all 0.3s ease;
+                position: relative;
+            }
+            
+            .project-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            }
+            
+            .project-image {
+                height: 220px;
+                overflow: hidden;
+                position: relative;
+            }
+            
+            .project-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.5s ease;
+            }
+            
+            .project-card:hover .project-image img {
+                transform: scale(1.05);
+            }
+            
+            .project-video {
+                width: 100%;
+                height: 220px;
+                object-fit: cover;
+            }
+            
+            .project-content {
+                padding: 30px;
+            }
+            
+            .project-tags {
+                display: flex;
+                gap: 10px;
+                margin-bottom: 20px;
+            }
+            
+            .project-tag {
+                background-color: rgba(126, 34, 206, 0.1);
+                color: var(--primary);
+                padding: 6px 12px;
+                border-radius: 20px;
+                font-size: 0.8rem;
+                font-weight: 600;
+                display: inline-block;
+            }
+            
+            .project-tag.company {
+                background-color: rgba(59, 130, 246, 0.1);
+                color: #3b82f6;
+            }
+            
+            .project-tag.locus {
+                background-color: rgba(16, 185, 129, 0.1);
+                color: #10b981;
+            }
+            
+            .project-title {
+                font-size: 1.4rem;
+                font-weight: 600;
+                margin-bottom: 15px;
+                color: var(--dark);
+                line-height: 1.3;
+            }
+            
+            .project-description {
+                color: var(--secondary);
+                margin-bottom: 25px;
+                line-height: 1.6;
+            }
+            
+            .project-metrics {
+                display: flex;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+            
+            .project-metric {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                color: var(--primary);
+                font-weight: 500;
+                font-size: 0.9rem;
+            }
+            
+            .sustainability-card {
+                border-top: 4px solid #3b82f6;
+            }
+            
+            .migration-card {
+                border-top: 4px solid #3b82f6;
+            }
+            
+            .research-card {
+                border-top: 4px solid var(--primary);
+            }
+            
+            .compliance-card {
+                border-top: 4px solid #10b981;
+            }
+
+            @media (max-width: 992px) {
+                .projects-grid {
+                    grid-template-columns: 1fr;
+                    gap: 25px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .project-content {
+                    padding: 25px;
+                }
+                
+                .project-image {
+                    height: 180px;
+                }
+            }
+        </style>
+
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Products</h2>
+                <p>Product launches driving measurable business outcomes for enterprise customers</p>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Product 1: Enterprise Sustainability & Learning Platform -->
+                <div class="project-card sustainability-card" data-aos="fade-up">
+                    <div class="project-image">
+                        <img src="UL.png" alt="Enterprise Sustainability Platform">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">Product Strategy</span>
+                            <span class="project-tag company">UL Solutions</span>
+                        </div>
+                        
+                        <h3 class="project-title">Enterprise Sustainability & Learning Platform (300+ Global Customers)</h3>
+                        <p class="project-description">Transformed legacy ESG reporting system into AI-powered intelligence platform for 300+ Fortune 500 customers. Built ML analytics, automated workflows, and carbon reduction insights generating $2M ARR, 15% revenue growth, and 95% compliance accuracy (CDP, GHG Protocol).</p>
+                        <div class="project-metrics">
+                            <div class="project-metric">
+                                <i class="fas fa-dollar-sign"></i>
+                                <span>$2M ARR Generated</span>
+                            </div>
+                            <div class="project-metric">
+                                <i class="fas fa-chart-line"></i>
+                                <span>15% Revenue Growth</span>
+                            </div>
+                            <div class="project-metric">
+                                <i class="fas fa-globe"></i>
+                                <span>300+ Enterprise Customers</span>
+                            </div>
+                        </div>
+                        <a href="sustainability-project-pm.html" class="learn-more-btn">
+                            <i class="fas fa-arrow-right"></i>
+                            Case Study
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Product 2: Enterprise Platform Migration -->
+                <div class="project-card migration-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="migration-dashboard.png" alt="Platform Migration">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">Product Transition</span>
+                            <span class="project-tag company">UL Solutions</span>
+                        </div>
+                        
+                        <h3 class="project-title">$8.3M Enterprise Migration Pipeline (280+ Legacy Customers)</h3>
+                        <p class="project-description">Built $8.3M migration pipeline transitioning 280+ legacy customers to modern platform. Led 7-person team delivering 15 solutions reducing migration time 22+ weeks, securing 95% retention and $5.8M budget via ROI analysis.</p>
+                        <div class="project-metrics">
+                            <div class="project-metric">
+                                <i class="fas fa-dollar-sign"></i>
+                                <span>$8.3M Pipeline Created</span>
+                            </div>
+                            <div class="project-metric">
+                                <i class="fas fa-clock"></i>
+                                <span>22+ Weeks Saved</span>
+                            </div>
+                            <div class="project-metric">
+                                <i class="fas fa-percentage"></i>
+                                <span>95% Retention Rate</span>
+                            </div>
+                        </div>
+                        <a href="migration-project.html" class="learn-more-btn">
+                            <i class="fas fa-arrow-right"></i>
+                            Case Study
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Product 3: Customer Discovery & Roadmap Program -->
+                <div class="project-card research-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="customer-research.png" alt="Customer Research">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">User Research</span>
+                            <span class="project-tag company">UL Solutions</span>
+                        </div>
+                        
+                        <h3 class="project-title">Post-Migration User Research Driving 18% Sales Growth</h3>
+                        <p class="project-description">Interviewed 58 enterprise customers post-migration, translating pain points into product roadmap via AI analytics and Power BI. Drove 18% YoY sales growth ($2M impact), 30% OSAT improvement, and repeatable process adopted across product lines.</p>
+                        <div class="project-metrics">
+                            <div class="project-metric">
+                                <i class="fas fa-comments"></i>
+                                <span>58 Customer Interviews</span>
+                            </div>
+                            <div class="project-metric">
+                                <i class="fas fa-chart-line"></i>
+                                <span>18% Sales Growth</span>
+                            </div>
+                            <div class="project-metric">
+                                <i class="fas fa-smile"></i>
+                                <span>30% OSAT Improvement</span>
+                            </div>
+                        </div>
+                        <a href="research-project.html" class="learn-more-btn">
+                            <i class="fas fa-arrow-right"></i>
+                            Case Study
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Product 4: Environmental Compliance & GHG Data Suite -->
+                <div class="project-card compliance-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <video class="project-video" autoplay muted loop>
+                            <source src="Locus.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">0→1 Product Development</span>
+                            <span class="project-tag company">Locus Technologies</span>
+                        </div>
+                        
+                        <h3 class="project-title">Environmental Compliance & GHG Data Suite</h3>
+                        <p class="project-description">Launched 4 carbon/environmental compliance products from concept to delivery as Product Engineer → PM. Defined requirements, prioritized features, and delivered 30+ custom dashboards (Tableau) for Fortune 500 EHS teams tracking emissions data.</p>
+                        <div class="project-metrics">
+                            <div class="project-metric">
+                                <i class="fas fa-cubes"></i>
+                                <span>30+ Dashboards Built</span>
+                            </div>
+                            <div class="project-metric">
+                                <i class="fas fa-rocket"></i>
+                                <span>4 Products Launched</span>
+                            </div>
+                            <div class="project-metric">
+                                <i class="fas fa-leaf"></i>
+                                <span>GHG Emissions Tracking</span>
+                            </div>
+                        </div>
+                        <a href="compliance-project.html" class="learn-more-btn">
+                            <i class="fas fa-arrow-right"></i>
+                            Case Study
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beyond Product Work Section -->
+    <section id="beyond" style="background: linear-gradient(135deg, #fdf4ff 0%, #f0f9ff 50%, #fef3c7 100%); padding: 80px 0; position: relative; overflow: hidden;">
+        <!-- Playful Background Elements -->
+        <div style="position: absolute; top: 50px; left: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(236, 72, 153, 0.08) 0%, transparent 70%); border-radius: 50%;"></div>
+        <div style="position: absolute; bottom: 100px; right: -80px; width: 250px; height: 250px; background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%); border-radius: 50%;"></div>
+        
+        <style>
+            @keyframes pulse {
+                0%, 100% { transform: scale(1); opacity: 0.6; }
+                50% { transform: scale(1.05); opacity: 0.8; }
+            }
+            
+            @media (max-width: 768px) {
+                section[id="beyond"] .beyond-grid {
+                    grid-template-columns: 1fr !important;
+                }
+                section[id="beyond"] img {
+                    height: 200px !important;
+                }
+                section[id="beyond"] h2 {
+                    font-size: 2rem !important;
+                }
+            }
+        </style>
+        
+        <div class="container" style="position: relative; z-index: 1;">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h2 style="font-size: 2.5rem; font-weight: 800; color: var(--dark); margin-bottom: 15px;">Beyond Product Work 🎭🗾🤖</h2>
+                <p style="font-size: 1.2rem; color: var(--secondary); max-width: 800px; margin: 0 auto;">When I'm not building products, I'm exploring art, culture, and AI innovation</p>
+            </div>
+
+            <div style="max-width: 1100px; margin: 0 auto;">
+                
+                <!-- Top Row: Ballet & Japan -->
+                <div class="beyond-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+                    
+                    <!-- Ballet Card -->
+                    <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.1); transition: all 0.4s ease;" data-aos="fade-up">
+                        <div style="position: relative; height: 280px; overflow: hidden; background: linear-gradient(135deg, #fce7f3, #fbcfe8);">
+                            <img src="ballet.jpg" alt="Ballet Performance" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div style="position: absolute; top: 15px; right: 15px; background: rgba(236, 72, 153, 0.95); color: white; padding: 8px 16px; border-radius: 25px; font-size: 0.85rem; font-weight: 700;">
+                                🩰 DISCIPLINE
+                            </div>
+                        </div>
+                        <div style="padding: 30px;">
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+                                <div style="width: 45px; height: 45px; border-radius: 50%; background: linear-gradient(135deg, #ec4899, #db2777); display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-theater-masks" style="font-size: 1.3rem; color: white;"></i>
+                                </div>
+                                <h3 style="font-size: 1.4rem; font-weight: 700; color: var(--dark); margin: 0;">Ballet & Performance Arts</h3>
+                            </div>
+                            <p style="font-size: 1.05rem; line-height: 1.7; color: var(--secondary); margin: 0;">
+                                <strong style="color: #ec4899;">Precision meets creativity</strong> — Ballet teaches the same principles I apply to product management: <em>iteration timing</em>, <em>coordinated execution</em>, and making complex launches look effortless. The best products, like great performances, come from disciplined practice and structured improvisation! 💃
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Japan Card -->
+                    <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.1); transition: all 0.4s ease;" data-aos="fade-up" data-aos-delay="100">
+                        <div style="position: relative; height: 280px; overflow: hidden; background: linear-gradient(135deg, #fef3c7, #fde68a);">
+                            <img src="japan.jpg" alt="Japan Travel" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div style="position: absolute; top: 15px; right: 15px; background: rgba(245, 158, 11, 0.95); color: white; padding: 8px 16px; border-radius: 25px; font-size: 0.85rem; font-weight: 700;">
+                                🇯🇵 GLOBAL MINDSET
+                            </div>
+                        </div>
+                        <div style="padding: 30px;">
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+                                <div style="width: 45px; height: 45px; border-radius: 50%; background: linear-gradient(135deg, #f59e0b, #d97706); display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-torii-gate" style="font-size: 1.3rem; color: white;"></i>
+                                </div>
+                                <h3 style="font-size: 1.4rem; font-weight: 700; color: var(--dark); margin: 0;">Japan Connections</h3>
+                            </div>
+                            <p style="font-size: 1.05rem; line-height: 1.7; color: var(--secondary); margin: 0;">
+                                My sister and brother live in Japan, making me a <strong style="color: #f59e0b;">frequent visitor</strong> to Tokyo, Kyoto, and beyond! 🗾 Navigating cross-cultural nuances strengthens my ability to lead global product teams — understanding diverse communication styles, market contexts, and how cultural perspectives shape user needs.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Bottom Row: AI Product Thinking -->
+                <div style="background: white; border-radius: 20px; padding: 40px; box-shadow: 0 8px 30px rgba(0,0,0,0.1); position: relative; overflow: hidden;" data-aos="fade-up" data-aos-delay="200">
+                    <div style="position: absolute; top: -50px; right: -50px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(126, 34, 206, 0.06) 0%, transparent 70%); border-radius: 50%; animation: pulse 4s ease-in-out infinite;"></div>
+                    
+                    <div style="position: relative; z-index: 1; display: flex; align-items: flex-start; gap: 30px;">
+                        <div style="flex-shrink: 0; width: 80px; height: 80px; border-radius: 20px; background: linear-gradient(135deg, #7e22ce, #a855f7); display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(126, 34, 206, 0.3);">
+                            <i class="fas fa-robot" style="font-size: 2.5rem; color: white;"></i>
+                        </div>
+                        <div style="flex: 1;">
+                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px; flex-wrap: wrap;">
+                                <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--dark); margin: 0;">AI Product Enthusiast & Builder</h3>
+                                <span style="background: linear-gradient(135deg, #7e22ce, #a855f7); color: white; padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 700;">🚀 HANDS-ON</span>
+                            </div>
+                            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--secondary); margin-bottom: 20px;">
+                                I don't just <em>talk</em> about AI products — I <strong style="color: var(--primary);">ship with them</strong>! This portfolio? Built using <strong>AI-assisted development</strong> (GitHub Copilot + Cursor). 🤖✨ I constantly experiment with how AI tools accelerate product discovery, automate data analysis, and unlock insights — staying hands-on keeps me credible when defining AI product roadmaps.
+                            </p>
+                            
+                            <!-- Tech Stack Pills -->
+                            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                                <span style="background: #f3e8ff; color: #7e22ce; padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; font-weight: 600; border: 2px solid #e9d5ff;">
+                                    <i class="fas fa-code" style="margin-right: 6px;"></i>AI-Assisted Development
+                                </span>
+                                <span style="background: #f3e8ff; color: #7e22ce; padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; font-weight: 600; border: 2px solid #e9d5ff;">
+                                    <i class="fas fa-brain" style="margin-right: 6px;"></i>GitHub Copilot
+                                </span>
+                                <span style="background: #f3e8ff; color: #7e22ce; padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; font-weight: 600; border: 2px solid #e9d5ff;">
+                                    <i class="fas fa-bolt" style="margin-right: 6px;"></i>Cursor IDE
+                                </span>
+                                <span style="background: #f3e8ff; color: #7e22ce; padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; font-weight: 600; border: 2px solid #e9d5ff;">
+                                    <i class="fas fa-chart-line" style="margin-right: 6px;"></i>Data-Driven Product Thinking
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PM Philosophy Quote -->
+                <div style="margin-top: 40px; text-align: center; padding: 30px; background: linear-gradient(135deg, rgba(126, 34, 206, 0.05), rgba(59, 130, 246, 0.05)); border-radius: 16px; border: 2px dashed rgba(126, 34, 206, 0.2);" data-aos="fade-up" data-aos-delay="300">
+                    <p style="font-size: 1.3rem; line-height: 1.8; color: var(--dark); font-style: italic; margin: 0;">
+                        <i class="fas fa-quote-left" style="color: var(--primary); font-size: 1rem; margin-right: 10px;"></i>
+                        <strong style="color: var(--primary);">My philosophy:</strong> The best product managers are <em>curious generalists</em> who bring diverse perspectives — whether from ballet's discipline, cross-cultural empathy, or hands-on AI experimentation — to solve complex customer problems creatively.
+                        <i class="fas fa-quote-right" style="color: var(--primary); font-size: 1rem; margin-left: 10px;"></i>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="padding: 80px 0; background: linear-gradient(135deg, var(--primary) 0%, #a855f7 100%);">
+        <style>
+            .contact-container {
+                max-width: 800px;
+                margin: 0 auto;
+                text-align: center;
+                color: white;
+            }
+            
+            .contact-title {
+                font-size: 2.5rem;
+                font-weight: 800;
+                margin-bottom: 20px;
+                letter-spacing: -0.02em;
+            }
+            
+            .contact-subtitle {
+                font-size: 1.2rem;
+                margin-bottom: 40px;
+                opacity: 0.95;
+                line-height: 1.6;
+            }
+            
+            .contact-methods {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 25px;
+                margin-top: 40px;
+            }
+            
+            .contact-method {
+                background: rgba(255, 255, 255, 0.15);
+                backdrop-filter: blur(10px);
+                padding: 30px;
+                border-radius: 12px;
+                transition: all 0.3s ease;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+            }
+            
+            .contact-method:hover {
+                background: rgba(255, 255, 255, 0.25);
+                transform: translateY(-5px);
+            }
+            
+            .contact-method i {
+                font-size: 2.5rem;
+                margin-bottom: 15px;
+                display: block;
+            }
+            
+            .contact-method h3 {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+                font-weight: 700;
+            }
+            
+            .contact-method a {
+                color: white;
+                text-decoration: none;
+                font-size: 1.05rem;
+                opacity: 0.95;
+                word-break: break-all;
+            }
+            
+            .contact-method a:hover {
+                opacity: 1;
+                text-decoration: underline;
+            }
+        </style>
+        
+        <div class="container">
+            <div class="contact-container" data-aos="fade-up">
+                <h2 class="contact-title">Let's Connect</h2>
+                <p class="contact-subtitle">
+                    Interested in discussing product strategy, AI/ML integration, or migration planning?<br>
+                    I'd love to hear from you.
+                </p>
+                
+                <div class="contact-methods">
+                    <div class="contact-method" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <a href="mailto:minjiangus@gmail.com">minjiangus@gmail.com</a>
+                    </div>
+                    
+                    <div class="contact-method" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fab fa-linkedin"></i>
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/mj7711/" target="_blank">linkedin.com/in/mj7711</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: var(--dark); color: white; padding: 60px 0 30px;">
+        <style>
+            .footer-content {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 40px;
+                margin-bottom: 40px;
+            }
+            
+            .footer-section h3 {
+                font-size: 1.3rem;
+                margin-bottom: 20px;
+                font-weight: 700;
+                color: var(--primary-light);
+            }
+            
+            .footer-section p {
+                color: rgba(255, 255, 255, 0.7);
+                line-height: 1.6;
+                margin-bottom: 15px;
+            }
+            
+            .footer-links {
+                list-style: none;
+                padding: 0;
+            }
+            
+            .footer-links li {
+                margin-bottom: 12px;
+            }
+            
+            .footer-links a {
+                color: rgba(255, 255, 255, 0.7);
+                text-decoration: none;
+                transition: all 0.3s ease;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+            }
+            
+            .footer-links a:hover {
+                color: var(--primary-light);
+                transform: translateX(5px);
+            }
+            
+            .social-links {
+                display: flex;
+                gap: 15px;
+                margin-top: 20px;
+            }
+            
+            .social-link {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                text-decoration: none;
+                font-size: 1.2rem;
+                transition: all 0.3s ease;
+            }
+            
+            .social-link:hover {
+                background: var(--primary-light);
+                transform: translateY(-3px);
+            }
+            
+            .footer-bottom {
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                padding-top: 30px;
+                text-align: center;
+                color: rgba(255, 255, 255, 0.6);
+            }
+            
+            @media (max-width: 768px) {
+                .footer-content {
+                    grid-template-columns: 1fr;
+                    gap: 30px;
+                }
+            }
+        </style>
+        
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Min Jiang</h3>
+                    <p>Data-Driven Product Manager specializing in Sustainability & Learning platforms with proven track record launching AI-powered products for Fortune 500 customers.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/mj7711/" class="social-link" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:minjiangus@gmail.com" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#hero"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+                        <li><a href="#journey"><i class="fas fa-chevron-right"></i> Product Journey</a></li>
+                        <li><a href="#projects"><i class="fas fa-chevron-right"></i> Featured Products</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Featured Work</h3>
+                    <ul class="footer-links">
+                        <li><a href="sustainability-project-pm.html"><i class="fas fa-leaf"></i> Sustainability Platform</a></li>
+                        <li><a href="migration-project.html"><i class="fas fa-exchange-alt"></i> Migration Pipeline</a></li>
+                        <li><a href="research-project.html"><i class="fas fa-search"></i> User Research</a></li>
+                        <li><a href="compliance-project.html"><i class="fas fa-chart-bar"></i> Environmental Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Min Jiang. All rights reserved. Built with focus on product thinking and customer outcomes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS (Animate On Scroll) Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <!-- JavaScript -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease',
+            once: true
+        });
+        
+        // Mobile Menu Toggle
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                if (this.getAttribute('href') === '#') return;
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                    
+                    if (navLinks.classList.contains('show')) {
+                        navLinks.classList.remove('show');
+                    }
+                }
+            });
+        });
+        
+        // Counter Animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.counter-animation');
+            const speed = 200;
+            
+            counters.forEach(counter => {
+                const target = +counter.innerText;
+                let count = 0;
+                const increment = target / speed;
+                
+                const updateCount = () => {
+                    if (count < target) {
+                        count += increment;
+                        counter.innerText = Math.ceil(count);
+                        setTimeout(updateCount, 1);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                
+                updateCount();
+            });
+        }
+        
+        window.addEventListener('load', animateCounters);
+    </script>
+</body>
+</html>

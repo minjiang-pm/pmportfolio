@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Analytics & Custom Solutions - Min Jiang | Product Engineer</title>
+    <meta name="description" content="Built 30+ analytics dashboards and custom enterprise solutions for Fortune 500 compliance platform - Locus Technologies">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <style>
+        :root {
+            --primary: #7e22ce;
+            --primary-light: #a855f7;
+            --locus-green: #10b981;
+            --locus-green-light: #34d399;
+            --text-dark: #1e293b;
+            --text-medium: #475569;
+            --text-light: #64748b;
+            --bg-light: #ffffff;
+            --bg-gray: #f8fafc;
+            --accent: #3b82f6;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-gray);
+            color: var(--text-dark);
+            line-height: 1.7;
+            font-size: 18px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        /* Password Protection Screen */
+        .password-screen {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--bg-gray) 0%, #f3e8ff 100%);
+            padding: 20px;
+        }
+
+        .password-container {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 50px rgba(126, 34, 206, 0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            border-top: 5px solid var(--locus-green);
+        }
+
+        .lock-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--locus-green), var(--locus-green-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .password-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .password-subtitle {
+            color: var(--text-medium);
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .password-form {
+            margin-bottom: 30px;
+        }
+
+        .password-input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        .password-input:focus {
+            outline: none;
+            border-color: var(--locus-green);
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+        }
+
+        .password-submit {
+            background: linear-gradient(135deg, var(--locus-green), var(--locus-green-light));
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .password-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+        }
+
+        .error-message {
+            background: linear-gradient(135deg, #fee2e2, #fecaca);
+            color: #dc2626;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid #dc2626;
+            display: none;
+        }
+
+        .back-to-portfolio {
+            color: var(--text-medium);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-portfolio:hover {
+            color: var(--locus-green);
+            transform: translateX(-3px);
+        }
+
+        /* Main Content (Hidden Initially) */
+        .main-content-wrapper {
+            display: none;
+        }
+        
+        /* Header - Consistent with Main Page */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 20px 0;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .back-link {
+            background-color: var(--text-medium);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        
+        .back-link:hover {
+            background-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Section - More Visual, Less Text */
+        .hero {
+            padding: 80px 0 40px;
+            background: linear-gradient(135deg, var(--locus-green) 0%, var(--locus-green-light) 100%);
+            color: white;
+            position: relative;
+        }
+        
+        .hero-content {
+            text-align: center;
+        }
+        
+        .project-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+        
+        .project-meta {
+            font-size: 1rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        /* Key Metrics - Visual Cards */
+        .key-metrics {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .metric-item {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.25);
+            padding: 20px 15px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .metric-item:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .metric-value {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 6px;
+            line-height: 1;
+        }
+        
+        .metric-label {
+            font-size: 0.8rem;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+        
+        /* Section Structure - Better Hierarchy */
+        section {
+            padding: 50px 0;
+        }
+        
+        section:first-of-type {
+            padding-top: 25px;
+        }
+        
+        .section-content {
+            background: white;
+            border-radius: 16px;
+            padding: 40px 45px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+        }
+        
+        .section-label {
+            font-size: 0.95rem;
+            font-weight: 800;
+            letter-spacing: 3px;
+            color: var(--primary);
+            margin-bottom: 18px;
+            display: block;
+            text-transform: uppercase;
+        }
+        
+        .section-label::before {
+            content: '';
+            display: inline-block;
+            width: 45px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--primary-purple));
+            margin-right: 14px;
+            vertical-align: middle;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 25px;
+            line-height: 1.25;
+            letter-spacing: -0.5px;
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+        
+        h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+        
+        p {
+            color: var(--text-medium);
+            margin-bottom: 16px;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+        
+        /* Compact Overview - TL;DR Style */
+        .tldr-box {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 35px;
+            margin: 30px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+        }
+        
+        .tldr-box h3 {
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            margin: 0 0 25px 0;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .tldr-box h3 i {
+            color: var(--locus-green);
+            font-size: 1.2rem;
+        }
+        
+        .tldr-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+        
+        .tldr-item {
+            display: flex;
+            gap: 15px;
+            align-items: start;
+            padding: 18px;
+            background: var(--bg-light);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .tldr-item:hover {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            transform: translateY(-2px);
+        }
+        
+        .tldr-item i {
+            color: var(--locus-green);
+            font-size: 1.4rem;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        
+        .tldr-item strong {
+            display: block;
+            color: var(--text-dark);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        
+        .tldr-item span {
+            color: var(--text-medium);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        /* Story Cards - Visual Storytelling */
+        .story-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--locus-green);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+        }
+        
+        .story-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .story-card h4 {
+            color: var(--locus-green);
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .story-card .highlight {
+            background: rgba(16, 185, 129, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: var(--locus-green);
+        }
+        
+        .story-brief {
+            color: var(--text-medium);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+        
+        .story-impact {
+            background: linear-gradient(135deg, rgba(126, 34, 206, 0.05), rgba(168, 85, 247, 0.05));
+            padding: 12px 15px;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+            margin-top: 12px;
+        }
+        
+        .story-impact strong {
+            color: var(--primary);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: block;
+            margin-bottom: 6px;
+        }
+        
+        .story-impact p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            line-height: 1.5;
+        }
+        .quick-nav {
+            background: linear-gradient(135deg, rgba(126, 34, 206, 0.03), rgba(168, 85, 247, 0.02));
+            border-radius: 12px;
+            padding: 15px 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            margin-bottom: 0;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            border: 1px solid rgba(126, 34, 206, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        
+        .quick-nav-link {
+            color: var(--text-medium);
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 600;
+            padding: 10px 22px;
+            border-radius: 20px;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: white;
+            border: 1px solid transparent;
+        }
+        
+        .quick-nav-link:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(126, 34, 206, 0.2);
+        }
+        
+        .quick-nav-link i {
+            font-size: 0.95rem;
+        }
+        
+        /* Work Samples Grid - Larger & More Prominent */
+        .work-samples-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin: 35px 0;
+        }
+        
+        .work-sample-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .work-sample-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            border-color: var(--locus-green);
+        }
+        
+        .sample-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-size: 5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        /* Adjust height for employee card (2nd card) */
+        .work-sample-card:nth-child(2) .sample-image {
+            height: 350px;
+        }
+        
+        /* Last card (slideshow) takes full width */
+        .work-sample-card:last-child {
+            grid-column: 1 / -1;
+        }
+        
+        .sample-video {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+        
+        .sample-content {
+            padding: 32px;
+        }
+        
+        .sample-tag {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--locus-green);
+            padding: 6px 14px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .sample-content h4 {
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        .sample-content p {
+            font-size: 1rem;
+            color: var(--text-medium);
+            margin: 0;
+            line-height: 1.65;
+        }
+        
+        /* Featured Work Sample - Full Width */
+        .featured-sample {
+            grid-column: 1 / -1;
+        }
+        
+        .featured-sample .sample-image,
+        .featured-sample .sample-video {
+            height: 350px;
+        }
+        
+        .featured-sample .sample-content {
+            padding: 30px;
+        }
+        
+        .featured-sample .sample-content h4 {
+            font-size: 1.4rem;
+        }
+        
+        .featured-sample .sample-content p {
+            font-size: 1.05rem;
+        }
+        
+        /* Role Bullets - Compact & Scannable */
+        .role-list {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+        
+        .role-list li {
+            padding: 14px 0 14px 40px;
+            position: relative;
+            color: var(--text-medium);
+            border-bottom: 1px solid #e2e8f0;
+            line-height: 1.6;
+            font-size: 0.98rem;
+        }
+        
+        .role-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .role-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--locus-green);
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+        
+        .role-list strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+        
+        /* Products/Deliverables Grid - Compact */
+        .deliverables-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin: 30px 0;
+        }
+        
+        .deliverable-card {
+            background: var(--bg-gray);
+            padding: 22px 25px;
+            border-radius: 10px;
+            border-left: 3px solid var(--locus-green);
+            transition: all 0.3s ease;
+        }
+        
+        .deliverable-card:hover {
+            transform: translateX(3px);
+            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+        }
+        
+        .deliverable-card h4 {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .deliverable-card p {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+            margin: 0;
+            line-height: 1.5;
+        }
+        
+        /* Results Highlight Box - More Compact */
+        .results-highlight {
+            background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+            padding: 30px 35px;
+            border-radius: 10px;
+            border-left: 4px solid var(--locus-green);
+            margin: 25px 0;
+        }
+        
+        .results-list {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0 0;
+        }
+        
+        .results-list li {
+            padding: 12px 0;
+            color: var(--text-medium);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            line-height: 1.6;
+            font-size: 0.98rem;
+        }
+        
+        .results-list li::before {
+            content: "✓";
+            color: var(--locus-green);
+            font-weight: 700;
+            font-size: 1.3rem;
+            line-height: 1.2;
+            flex-shrink: 0;
+        }
+        
+        .results-list strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+        
+        /* Quote Box */
+        .quote-box {
+            background: var(--bg-gray);
+            border-left: 4px solid var(--primary);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 8px;
+        }
+        
+        .quote-box blockquote {
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        
+        .quote-box cite {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-style: normal;
+            font-weight: 600;
+        }
+        
+        /* Navigation to Other Projects */
+        .other-projects {
+            text-align: center;
+            padding: 60px 0;
+        }
+        
+        .other-projects h3 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--text-dark);
+        }
+        
+        .project-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .project-link {
+            padding: 12px 25px;
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 25px;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .project-link:hover {
+            border-color: var(--locus-green);
+            background: var(--locus-green);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Responsive */
+        @media (max-width: 968px) {
+            .key-metrics {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .work-samples-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .featured-sample {
+                grid-column: span 2;
+            }
+            
+            .deliverables-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+                    @media (max-width: 768px) {
+            .quick-nav {
+                padding: 12px 15px;
+                gap: 6px;
+            }
+            
+            .quick-nav-link {
+                font-size: 0.75rem;
+                padding: 6px 12px;
+            }
+            
+            .section-label {
+                font-size: 0.65rem;
+                padding: 5px 12px;
+            }
+            body {
+                font-size: 16px;
+            }
+            
+            .container {
+                padding: 0 20px;
+            }
+            
+            .password-container {
+                padding: 30px 20px;
+                margin: 20px;
+            }
+
+            .password-title {
+                font-size: 1.5rem;
+            }
+
+            .lock-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+            
+            .project-title {
+                font-size: 1.75rem;
+            }
+            
+            .project-meta {
+                font-size: 1rem;
+            }
+            
+            .section-content {
+                padding: 25px 20px;
+            }
+            
+            .key-metrics {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+            
+            .metric-item {
+                padding: 15px 10px;
+            }
+            
+            .metric-value {
+                font-size: 1.6rem;
+            }
+            
+            .metric-label {
+                font-size: 0.75rem;
+            }
+            
+            .hero {
+                padding: 100px 0 35px;
+            }
+            
+            section {
+                padding: 35px 0;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            h3 {
+                font-size: 1.2rem;
+            }
+            
+            .role-list li {
+                padding-left: 32px;
+                font-size: 0.92rem;
+            }
+            
+            .role-list li::before {
+                font-size: 1.1rem;
+            }
+            
+            .work-samples-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .featured-sample {
+                grid-column: span 1;
+            }
+            
+            .quick-nav {
+                padding: 15px;
+                gap: 8px;
+            }
+            
+            .quick-nav-link {
+                font-size: 0.8rem;
+                padding: 6px 12px;
+            }
+            
+            .sample-image,
+            .sample-video,
+            .featured-sample .sample-image,
+            .featured-sample .sample-video {
+                height: 160px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .project-title {
+                font-size: 1.5rem;
+            }
+            
+            .key-metrics {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Password Protection Screen -->
+    <div id="password-screen" class="password-screen">
+        <div class="password-container" data-aos="zoom-in">
+            <div class="lock-icon">
+                <i class="fas fa-lock"></i>
+            </div>
+            <h1 class="password-title">Protected Content</h1>
+            <p class="password-subtitle">This project contains confidential work samples and proprietary information. Please enter the access code to continue.</p>
+            
+            <form class="password-form" id="password-form">
+                <input type="password" id="password-input" class="password-input" placeholder="Enter access code" autocomplete="off">
+                <button type="submit" class="password-submit">
+                    <i class="fas fa-unlock-alt"></i> Access Project Details
+                </button>
+            </form>
+            
+            <div id="error-message" class="error-message">
+                <i class="fas fa-exclamation-triangle"></i> Incorrect access code. Please try again.
+            </div>
+            
+            <a href="index.html#projects" class="back-to-portfolio">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content (Hidden Initially) -->
+    <div id="main-content" class="main-content-wrapper">
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <nav>
+                    <a href="index.html" class="logo">Min Jiang</a>
+                    <a href="index.html#projects" class="back-link">
+                        <i class="fas fa-arrow-left"></i> Back to Portfolio
+                    </a>
+                </nav>
+            </div>
+        </header>
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="project-title">AI-Powered Sustainability & Compliance Platform</h1>
+                    <div class="project-meta">
+                        <strong>Locus Technologies</strong> • Product Engineer (2017-2019) → Product Manager (2019-2022) • 4 yrs 10 mos
+                    </div>
+                    
+                    <!-- Key Metrics -->
+                    <div class="key-metrics" data-aos="fade-up">
+                        <div class="metric-item">
+                            <div class="metric-value">3+ years</div>
+                            <div class="metric-label">Product Manager</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-value">SaaS Platform</div>
+                            <div class="metric-label">AI-Powered EHS & ESG</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-value">0 → Launch</div>
+                            <div class="metric-label">Led Product Solutions</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-value">Agile Teams</div>
+                            <div class="metric-label">Customer-Engineering Liaison</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Quick Navigation - Sticky -->
+        <div style="background: var(--bg-light); padding: 12px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+            <div class="container">
+                <div class="quick-nav" data-aos="fade-down">
+                    <a href="#overview" class="quick-nav-link"><i class="fas fa-compass"></i> Overview</a>
+                    <a href="#samples" class="quick-nav-link"><i class="fas fa-layer-group"></i> Work Samples</a>
+                    <a href="#role" class="quick-nav-link"><i class="fas fa-lightbulb"></i> Eng → PM Journey</a>
+                    <a href="#results" class="quick-nav-link"><i class="fas fa-award"></i> Key Skills</a>
+                    <a href="#recognition" class="quick-nav-link"><i class="fas fa-star"></i> Recognition</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Context Section -->
+        <section id="overview" style="background: linear-gradient(135deg, rgba(126, 34, 206, 0.03), rgba(168, 85, 247, 0.02));">
+            <div class="container">
+                <div class="section-content" data-aos="fade-up">
+                    <div class="section-label">Overview</div>
+                    <h2>Led AI-Powered Sustainability Platform as PM</h2>
+                    
+                    <!-- TL;DR Box -->
+                    <div class="tldr-box">
+                        <h3><i class="fas fa-bolt"></i> At a Glance</h3>
+                        <div class="tldr-grid">
+                            <div class="tldr-item">
+                                <i class="fas fa-user-tie"></i>
+                                <div>
+                                    <strong>Role</strong>
+                                    <span>Product Manager (2019-2022) at Locus Technologies</span>
+                                </div>
+                            </div>
+                            <div class="tldr-item">
+                                <i class="fas fa-bullseye"></i>
+                                <div>
+                                    <strong>Product</strong>
+                                    <span>AI-powered SaaS for EHS & ESG reporting (GHG, Water, Sustainability)</span>
+                                </div>
+                            </div>
+                            <div class="tldr-item">
+                                <i class="fas fa-rocket"></i>
+                                <div>
+                                    <strong>What I Did</strong>
+                                    <span>Led product solutions from concept → launch, managed roadmap & agile teams</span>
+                                </div>
+                            </div>
+                            <div class="tldr-item">
+                                <i class="fas fa-users-cog"></i>
+                                <div>
+                                    <strong>Impact</strong>
+                                    <span>Customer-engineering liaison, delivered multifaceted implementations</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-dark); margin-top: 30px;">
+                        As <strong>Product Manager for Sustainability solutions</strong>, I led development of AI-powered SaaS applications for environmental compliance and ESG reporting. Managed full product lifecycle from discovery to launch, working across agile scrum teams to align customer needs with technical delivery.
+                    </p>
+                    
+                    <p style="font-size: 1.05rem; line-height: 1.75; color: var(--text-medium); margin-top: 20px;">
+                        <strong>The Journey:</strong> Started as Product Engineer building custom dashboards (2017-2019), promoted to Product Manager after demonstrating product thinking and customer empathy. Spent 3+ years driving sustainability product strategy, managing releases, and training customers.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Work Samples Section - NEW -->
+        <section id="samples" style="background: linear-gradient(135deg, rgba(126, 34, 206, 0.03), rgba(168, 85, 247, 0.02)); padding: 50px 0;">
+            <div class="container">
+                <div class="section-label">Work Samples</div>
+                <h2>What I Delivered as Product Manager</h2>
+                <p style="max-width: 720px; margin-bottom: 30px; color: var(--text-medium); font-size: 1.05rem;">Led sustainability product solutions from concept to launch, managing agile teams and customer implementations.</p>
+                
+                <div class="work-samples-grid">
+                    <!-- Featured Video Demo - Full Width -->
+                    <div class="work-sample-card featured-sample" data-aos="fade-up">
+                        <video class="sample-video" autoplay muted loop playsinline>
+                            <source src="Locus1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="sample-content">
+                            <span class="sample-tag">Product Demo</span>
+                            <h4>AI-Powered EHS & ESG Platform</h4>
+                            <p>Platform I managed as PM: AI-powered integrated environmental, health, safety, and sustainability reporting. Led product roadmap for GHG emissions, water quality, and ESG management modules.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Management - REAL PM WORK -->
+                    <div class="work-sample-card" data-aos="fade-up" data-aos-delay="100">
+                        <img src="Locus Applications.jpg" alt="Locus Applications" style="width: 100%; height: auto; border-radius: 12px 12px 0 0; display: block;">
+                        <div class="sample-content">
+                            <span class="sample-tag">Product Leadership</span>
+                            <h4>Product Solutions: Concept → Launch</h4>
+                            <p>Led several sustainability product solutions from initial concept through launch. Managed multifaceted configurations and implementations, aligning customer requirements with engineering capacity and business strategy.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Agile & Release Management -->
+                    <div class="work-sample-card" data-aos="fade-up" data-aos-delay="150">
+                        <div class="sample-image" style="padding: 0; overflow: hidden; cursor: zoom-in;" onclick="zoomImage(this)">
+                            <img src="employee.jpg" alt="Release & Enhancement Schedules" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                        </div>
+                        <div class="sample-content">
+                            <span class="sample-tag">Agile Practices</span>
+                            <h4>Release & Enhancement Schedules</h4>
+                            <p>Managed agile development practices, release schedules, and enhancement roadmaps. Functioned as liaison between customers and internal scrum teams to ensure successful product deliveries and maintain velocity.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Complex Implementation -->
+                    <div class="work-sample-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="sample-image" style="padding: 0; overflow: hidden; cursor: zoom-in;" onclick="zoomImage(this)">
+                            <img src="hbws-workflow.png" alt="HBWS Complex Workflow Implementation" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                        </div>
+                        <div class="sample-content">
+                            <span class="sample-tag">Enterprise Implementation</span>
+                            <h4>Complex Workflow Implementation</h4>
+                            <p>Led implementation for key enterprise customers with highly complex workflows. Designed and deployed multi-step processes including field data collection, lab QC, sample analysis, and regulatory reporting - ensuring seamless integration with existing systems.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Sustainability Focus -->
+                    <div class="work-sample-card" data-aos="fade-up" data-aos-delay="250">
+                        <div class="sample-image" style="padding: 0; overflow: hidden; cursor: zoom-in;" onclick="zoomImage(this)">
+                            <img src="esg reporting.png" alt="ESG Reporting" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                        </div>
+                        <div class="sample-content">
+                            <span class="sample-tag">Domain Expertise</span>
+                            <h4>GHG, Water Quality & ESG Management</h4>
+                            <p>Specialized in sustainability management applications including greenhouse gas emissions tracking, water quality monitoring, and ESG reporting. Deep expertise in environmental compliance requirements and data analytics.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Technical Foundation with Auto-Slideshow -->
+                    <div class="work-sample-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="sample-image slideshow-container" style="padding: 0; overflow: hidden; position: relative; cursor: pointer;" onclick="zoomImage(this)">
+                            <img src="facility-mgmt-1.png" alt="Facility Management Interface" class="slideshow-image active" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 1; transition: opacity 0.8s ease;">
+                            <img src="facility-mgmt-2.png" alt="Facility Management Dashboard" class="slideshow-image" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.8s ease;">
+                            <img src="orbis-device-mgt.png" alt="Orbis Device Management" class="slideshow-image" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.8s ease;">
+                            <img src="orbis-gis.png" alt="Orbis GIS" class="slideshow-image" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.8s ease;">
+                            <img src="akrr-incident.png" alt="AKRR Incident Analytics" class="slideshow-image" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.8s ease;">
+                            <img src="facility-charts.png" alt="Facility Dashboard Charts" class="slideshow-image" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.8s ease;">
+                            <img src="facility-dashboard.png" alt="Facility Management Dashboard" class="slideshow-image" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.8s ease;">
+                            
+                            <!-- Slideshow indicators -->
+                            <div style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 10;">
+                                <span class="slide-dot active" style="width: 10px; height: 10px; background: white; border-radius: 50%; opacity: 0.8; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></span>
+                                <span class="slide-dot" style="width: 10px; height: 10px; background: white; border-radius: 50%; opacity: 0.4; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></span>
+                                <span class="slide-dot" style="width: 10px; height: 10px; background: white; border-radius: 50%; opacity: 0.4; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></span>
+                                <span class="slide-dot" style="width: 10px; height: 10px; background: white; border-radius: 50%; opacity: 0.4; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></span>
+                                <span class="slide-dot" style="width: 10px; height: 10px; background: white; border-radius: 50%; opacity: 0.4; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></span>
+                                <span class="slide-dot" style="width: 10px; height: 10px; background: white; border-radius: 50%; opacity: 0.4; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></span>
+                                <span class="slide-dot" style="width: 10px; height: 10px; background: white; border-radius: 50%; opacity: 0.4; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></span>
+                            </div>
+                        </div>
+                        <div class="sample-content">
+                            <span class="sample-tag">Technical Background</span>
+                            <h4>Product Engineer Foundation (2017-2019)</h4>
+                            <p>Built 30+ custom dashboards and integrations as Product Engineer before PM promotion. Technical background enables effective collaboration with engineering and informed product decisions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- My Role Section - Reframed as Story -->
+        <section id="role" style="background: white;">
+            <div class="container">
+                <div class="section-content" data-aos="fade-up">
+                    <div class="section-label">How It Started</div>
+                    <h2>From Product Engineer to Product Manager</h2>
+                    
+                    <p style="font-size: 1.12rem; color: var(--text-dark); margin-bottom: 28px; line-height: 1.75; max-width: 800px;">
+                        I joined as Product Engineer in 2017 building dashboards. By 2019, I was promoted to <strong>Product Manager</strong> leading sustainability product strategy. Here's what made the difference:
+                    </p>
+                    
+                    <div style="display: grid; gap: 22px; margin-top: 35px;">
+                        <div style="background: white; padding: 26px 30px; border-radius: 12px; border-left: 4px solid var(--locus-green); box-shadow: 0 2px 12px rgba(0,0,0,0.04);">
+                            <h4 style="color: var(--text-dark); margin: 0 0 10px 0; font-size: 1.18rem; font-weight: 700;">🎯 As Product Engineer (2017-2019)</h4>
+                            <p style="margin: 0; color: var(--text-medium); line-height: 1.7; font-size: 0.98rem;">
+                                Built 30+ custom dashboards and API integrations. But the valuable part? Learning to ask <strong>"What problem are we actually solving?"</strong> instead of just executing specs. Started tracking support patterns → turned them into features.
+                            </p>
+                        </div>
+                        
+                        <div style="background: white; padding: 30px; border-radius: 12px; border-left: 4px solid var(--primary-purple); box-shadow: 0 2px 12px rgba(0,0,0,0.04);">
+                            <h4 style="color: var(--text-dark); margin: 0 0 12px 0; font-size: 1.2rem;">� As Product Manager (2019-2022)</h4>
+                            <p style="margin: 0 0 12px 0; color: var(--text-medium); line-height: 1.75;">
+                                Led <strong>AI-powered sustainability product solutions from 0 → launch.</strong> Managed product roadmap for GHG emissions, water quality, and ESG reporting applications serving Fortune 500 clients.
+                            </p>
+                            <p style="margin: 0; color: var(--text-medium); line-height: 1.75;">
+                                <strong>Key responsibilities:</strong> Customer discovery → feature prioritization → sprint planning → release management → user training. Functioned as liaison between agile scrum teams and enterprise customers to ensure successful deliveries.
+                            </p>
+                        </div>
+                        
+                        <div style="background: white; padding: 26px 30px; border-radius: 12px; border-left: 4px solid var(--locus-green); box-shadow: 0 2px 12px rgba(0,0,0,0.04);">
+                            <h4 style="color: var(--text-dark); margin: 0 0 10px 0; font-size: 1.18rem; font-weight: 700;">💡 What Made the Promotion Happen</h4>
+                            <p style="margin: 0; color: var(--text-medium); line-height: 1.7; font-size: 0.98rem;">
+                                Customer told me: <strong>"Your dashboard saved us from hiring another analyst."</strong> Not because of technical complexity—because I understood their workflow deeply enough to automate the right 3-hour manual task. That's when leadership saw I was already doing PM work.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Results Section - Consolidated & Storytelling -->
+        <section id="results" style="background: white; padding: 50px 0;">
+            <div class="container">
+                <div class="section-content" data-aos="fade-up">
+                    <div class="section-label">What I Learned</div>
+                    <h2>Key PM Skills from This Experience</h2>
+                    
+                    <p style="font-size: 1.15rem; color: var(--text-dark); margin-bottom: 28px; line-height: 1.8; max-width: 750px;">
+                        3+ years as Product Manager for AI-powered sustainability SaaS taught me:
+                    </p>
+                    
+                    <div style="display: grid; gap: 18px; margin-bottom: 35px;">
+                        <div style="background: white; padding: 24px 28px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
+                            <div style="display: flex; align-items: start; gap: 20px;">
+                                <div style="background: linear-gradient(135deg, #7e22ce, #9333ea); width: 52px; height: 52px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="fas fa-rocket" style="color: white; font-size: 1.35rem;"></i>
+                                </div>
+                                <div>
+                                    <h4 style="margin: 0 0 10px 0; color: var(--text-dark); font-size: 1.12rem; font-weight: 700;">0 → 1 Product Development</h4>
+                                    <p style="margin: 0; color: var(--text-medium); line-height: 1.7; font-size: 0.96rem;">
+                                        Led sustainability solutions from initial concept through customer launch. Discovery → prioritization → delivery → iteration.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="background: white; padding: 24px 28px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
+                            <div style="display: flex; align-items: start; gap: 20px;">
+                                <div style="background: linear-gradient(135deg, #7e22ce, #9333ea); width: 52px; height: 52px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="fas fa-users-cog" style="color: white; font-size: 1.35rem;"></i>
+                                </div>
+                                <div>
+                                    <h4 style="margin: 0 0 10px 0; color: var(--text-dark); font-size: 1.12rem; font-weight: 700;">Cross-Functional Leadership</h4>
+                                    <p style="margin: 0; color: var(--text-medium); line-height: 1.7; font-size: 0.96rem;">
+                                        Liaison between customers and agile scrum teams. Translated business needs into technical requirements, managed stakeholder expectations.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="background: white; padding: 24px 28px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
+                            <div style="display: flex; align-items: start; gap: 20px;">
+                                <div style="background: linear-gradient(135deg, #7e22ce, #9333ea); width: 52px; height: 52px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="fas fa-calendar-alt" style="color: white; font-size: 1.35rem;"></i>
+                                </div>
+                                <div>
+                                    <h4 style="margin: 0 0 10px 0; color: var(--text-dark); font-size: 1.12rem; font-weight: 700;">Release & Roadmap Management</h4>
+                                    <p style="margin: 0; color: var(--text-medium); line-height: 1.7; font-size: 0.96rem;">
+                                        Managed agile development practices, sprint planning, and enhancement schedules. Balanced customer urgency with engineering capacity.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="background: white; padding: 24px 28px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
+                            <div style="display: flex; align-items: start; gap: 20px;">
+                                <div style="background: linear-gradient(135deg, #7e22ce, #9333ea); width: 52px; height: 52px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="fas fa-code" style="color: white; font-size: 1.35rem;"></i>
+                                </div>
+                                <div>
+                                    <h4 style="margin: 0 0 10px 0; color: var(--text-dark); font-size: 1.12rem; font-weight: 700;">Technical Credibility from Engineering Background</h4>
+                                    <p style="margin: 0; color: var(--text-medium); line-height: 1.7; font-size: 0.96rem;">
+                                        Built 30+ dashboards before PM role. When eng says "3 months," I can ask smart questions about scope, architecture, and tradeoffs.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="background: linear-gradient(135deg, rgba(126, 34, 206, 0.08), rgba(168, 85, 247, 0.08)); padding: 30px 35px; border-radius: 14px; border-left: 5px solid #7e22ce;">
+                        <h3 style="margin: 0 0 16px 0; color: #7e22ce; font-size: 1.3rem; font-weight: 700;">Why This Experience Matters</h3>
+                        <p style="margin: 0; color: var(--text-dark); line-height: 1.75; font-size: 1.05rem;">
+                            I've led <strong>full product lifecycle for enterprise SaaS</strong>—from customer discovery and roadmap planning to agile delivery and user training. I understand sustainability/compliance domain deeply. And I have engineering empathy: I know what makes a good spec, when to push back, and how to work with technical teams effectively.
+                        </p>
+                        <p style="margin: 16px 0 0 0; color: var(--text-medium); line-height: 1.7; font-size: 1rem;">
+                            This wasn't a "junior PM" role or an APM rotation. I owned product strategy for sustainability solutions at a funded SaaS company serving Fortune 500 clients for over 3 years.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Other Projects Navigation -->
+        <section class="other-projects">
+            <div class="container">
+                <h3>View Other Projects</h3>
+                <div class="project-links">
+                    <a href="sustainability-project.html" class="project-link">Enterprise Sustainability Platform</a>
+                    <a href="migration-project.html" class="project-link">Product Migration Leadership</a>
+                    <a href="research-project.html" class="project-link">Customer Research Program</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 600,
+            easing: 'ease-out',
+            once: true,
+            offset: 50
+        });
+
+        // Password protection logic
+        const PASSWORD = 'minjiangpm2025';
+        
+        document.getElementById('password-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const passwordInput = document.getElementById('password-input');
+            const errorMessage = document.getElementById('error-message');
+            const passwordScreen = document.getElementById('password-screen');
+            const mainContent = document.getElementById('main-content');
+            
+            if (passwordInput.value === PASSWORD) {
+                // Correct password - show content with animation
+                passwordScreen.style.display = 'none';
+                mainContent.style.display = 'block';
+                
+                // Scroll to top smoothly
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                
+                // Re-initialize AOS for the newly shown content
+                AOS.refresh();
+                
+                // Store authentication in session
+                sessionStorage.setItem('complianceProjectAccess', 'granted');
+            } else {
+                // Wrong password - show error
+                errorMessage.style.display = 'block';
+                passwordInput.value = '';
+                passwordInput.focus();
+                
+                // Add shake animation to input
+                passwordInput.style.animation = 'shake 0.5s';
+                setTimeout(() => {
+                    passwordInput.style.animation = '';
+                }, 500);
+            }
+        });
+
+        // Check if user already authenticated in this session
+        window.addEventListener('load', function() {
+            if (sessionStorage.getItem('complianceProjectAccess') === 'granted') {
+                document.getElementById('password-screen').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            }
+        });
+
+        // Add shake animation CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                25% { transform: translateX(-5px); }
+                75% { transform: translateX(5px); }
+            }
+            
+            /* Zoom modal styles */
+            .zoom-modal {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.9);
+                z-index: 9999;
+                cursor: zoom-out;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .zoom-modal.active {
+                display: flex;
+            }
+            
+            .zoom-modal img {
+                max-width: 95%;
+                max-height: 95%;
+                object-fit: contain;
+                box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+            }
+            
+            .zoom-close {
+                position: absolute;
+                top: 20px;
+                right: 30px;
+                color: white;
+                font-size: 40px;
+                font-weight: bold;
+                cursor: pointer;
+                z-index: 10000;
+            }
+            
+            .zoom-close:hover {
+                color: #a855f7;
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Zoom image function
+        function zoomImage(element) {
+            const img = element.querySelector('img');
+            const modal = document.createElement('div');
+            modal.className = 'zoom-modal active';
+            modal.innerHTML = `
+                <span class="zoom-close" onclick="this.parentElement.remove()">&times;</span>
+                <img src="${img.src}" alt="${img.alt}">
+            `;
+            modal.onclick = function(e) {
+                if (e.target === modal || e.target.className === 'zoom-close') {
+                    modal.remove();
+                }
+            };
+            document.body.appendChild(modal);
+        }
+        
+        // Make zoom function global
+        window.zoomImage = zoomImage;
+        
+        // Auto-slideshow for dashboard images
+        (function() {
+            const containers = document.querySelectorAll('.slideshow-container');
+            
+            containers.forEach(container => {
+                const images = container.querySelectorAll('.slideshow-image');
+                const dots = container.querySelectorAll('.slide-dot');
+                let currentIndex = 0;
+                
+                function showSlide(index) {
+                    // Hide all images
+                    images.forEach(img => {
+                        img.style.opacity = '0';
+                        img.classList.remove('active');
+                    });
+                    
+                    // Update dots
+                    dots.forEach(dot => {
+                        dot.style.opacity = '0.4';
+                        dot.classList.remove('active');
+                    });
+                    
+                    // Show current image
+                    if (images[index]) {
+                        images[index].style.opacity = '1';
+                        images[index].classList.add('active');
+                    }
+                    
+                    // Update current dot
+                    if (dots[index]) {
+                        dots[index].style.opacity = '0.8';
+                        dots[index].classList.add('active');
+                    }
+                }
+                
+                function nextSlide() {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    showSlide(currentIndex);
+                }
+                
+                // Auto-play every 3 seconds
+                setInterval(nextSlide, 3000);
+                
+                // Click dots to jump to specific slide
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', (e) => {
+                        e.stopPropagation(); // Prevent zoom when clicking dots
+                        currentIndex = index;
+                        showSlide(currentIndex);
+                    });
+                });
+                
+                // Initialize first slide
+                showSlide(0);
+            });
+        })();
+    </script>
+</body>
+</html>

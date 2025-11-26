@@ -938,8 +938,8 @@
     </style>
 </head>
 <body>
-    <!-- Password Protection Screen -->
-    <div class="main-content-wrapper">
+    <!-- Main Content -->
+    <div id="main-content" class="main-content-wrapper" style="display: block;">
         <!-- Header -->
         <header>
             <div class="container">
@@ -1294,30 +1294,7 @@
             offset: 50
         });
 
-
-                
-                // Re-initialize AOS for the newly shown content
-                AOS.refresh();
-                
-                // Store authentication in session
-                sessionStorage.setItem('complianceProjectAccess', 'granted');
-            } else {
-                // Wrong password - show error
-                errorMessage.style.display = 'block';
-                passwordInput.value = '';
-                passwordInput.focus();
-                
-                // Add shake animation to input
-                passwordInput.style.animation = 'shake 0.5s';
-                setTimeout(() => {
-                    passwordInput.style.animation = '';
-                }, 500);
-            }
-        });
-
-
-
-        // Add shake animation CSS
+        // Add styling CSS
         const style = document.createElement('style');
         style.textContent = `
             @keyframes shake {

@@ -43,117 +43,7 @@
             padding: 0 40px;
         }
         
-        /* Password Protection Screen */
-        .password-screen {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, var(--bg-gray) 0%, #f3e8ff 100%);
-            padding: 20px;
-        }
 
-        .password-container {
-            background: white;
-            border-radius: 20px;
-            padding: 50px;
-            box-shadow: 0 20px 50px rgba(126, 34, 206, 0.1);
-            text-align: center;
-            max-width: 500px;
-            width: 100%;
-            border-top: 5px solid var(--locus-green);
-        }
-
-        .lock-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--locus-green), var(--locus-green-light));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 30px;
-            color: white;
-            font-size: 2rem;
-        }
-
-        .password-title {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 15px;
-        }
-
-        .password-subtitle {
-            color: var(--text-medium);
-            margin-bottom: 40px;
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-
-        .password-form {
-            margin-bottom: 30px;
-        }
-
-        .password-input {
-            width: 100%;
-            padding: 15px 20px;
-            border: 2px solid #e2e8f0;
-            border-radius: 12px;
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            transition: all 0.3s ease;
-            text-align: center;
-            letter-spacing: 2px;
-        }
-
-        .password-input:focus {
-            outline: none;
-            border-color: var(--locus-green);
-            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
-        }
-
-        .password-submit {
-            background: linear-gradient(135deg, var(--locus-green), var(--locus-green-light));
-            color: white;
-            border: none;
-            padding: 15px 40px;
-            border-radius: 12px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .password-submit:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
-        }
-
-        .error-message {
-            background: linear-gradient(135deg, #fee2e2, #fecaca);
-            color: #dc2626;
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 20px;
-            border-left: 4px solid #dc2626;
-            display: none;
-        }
-
-        .back-to-portfolio {
-            color: var(--text-medium);
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
 
         .back-to-portfolio:hover {
             color: var(--locus-green);
@@ -939,33 +829,7 @@
 </head>
 <body>
     <!-- Password Protection Screen -->
-    <div id="password-screen" class="password-screen">
-        <div class="password-container" data-aos="zoom-in">
-            <div class="lock-icon">
-                <i class="fas fa-lock"></i>
-            </div>
-            <h1 class="password-title">Protected Content</h1>
-            <p class="password-subtitle">This project contains confidential work samples and proprietary information. Please enter the access code to continue.</p>
-            
-            <form class="password-form" id="password-form">
-                <input type="password" id="password-input" class="password-input" placeholder="Enter access code" autocomplete="off">
-                <button type="submit" class="password-submit">
-                    <i class="fas fa-unlock-alt"></i> Access Project Details
-                </button>
-            </form>
-            
-            <div id="error-message" class="error-message">
-                <i class="fas fa-exclamation-triangle"></i> Incorrect access code. Please try again.
-            </div>
-            
-            <a href="index.html#projects" class="back-to-portfolio">
-                <i class="fas fa-arrow-left"></i> Back to Portfolio
-            </a>
-        </div>
-    </div>
-
-    <!-- Main Content (Hidden Initially) -->
-    <div id="main-content" class="main-content-wrapper">
+    <div class="main-content-wrapper">
         <!-- Header -->
         <header>
             <div class="container">
@@ -1321,50 +1185,7 @@
         });
 
         // Password protection logic
-        const PASSWORD = 'minjiangpm2025';
-        
-        document.getElementById('password-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const passwordInput = document.getElementById('password-input');
-            const errorMessage = document.getElementById('error-message');
-            const passwordScreen = document.getElementById('password-screen');
-            const mainContent = document.getElementById('main-content');
-            
-            if (passwordInput.value === PASSWORD) {
-                // Correct password - show content with animation
-                passwordScreen.style.display = 'none';
-                mainContent.style.display = 'block';
-                
-                // Scroll to top smoothly
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-                
-                // Re-initialize AOS for the newly shown content
-                AOS.refresh();
-                
-                // Store authentication in session
-                sessionStorage.setItem('complianceProjectAccess', 'granted');
-            } else {
-                // Wrong password - show error
-                errorMessage.style.display = 'block';
-                passwordInput.value = '';
-                passwordInput.focus();
-                
-                // Add shake animation to input
-                passwordInput.style.animation = 'shake 0.5s';
-                setTimeout(() => {
-                    passwordInput.style.animation = '';
-                }, 500);
-            }
-        });
 
-        // Check if user already authenticated in this session
-        window.addEventListener('load', function() {
-            if (sessionStorage.getItem('complianceProjectAccess') === 'granted') {
-                document.getElementById('password-screen').style.display = 'none';
-                document.getElementById('main-content').style.display = 'block';
-            }
-        });
 
         // Add shake animation CSS
         const style = document.createElement('style');

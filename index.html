@@ -311,6 +311,11 @@
         h1 span {
             color: var(--primary);
         }
+
+        .headline-focus {
+            display: inline-block;
+            white-space: nowrap;
+        }
         
         .hero p {
             font-size: 1.25rem;
@@ -396,6 +401,15 @@
 
         /* Mobile responsive */
         @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+                line-height: 1.25;
+            }
+
+            .headline-focus {
+                white-space: normal;
+            }
+
             .content-header {
                 gap: 15px;
                 margin-bottom: 20px;
@@ -470,8 +484,8 @@
     <section class="hero">
         <div class="container hero-content">
             <div class="hero-text">
-                <h1>Data-Driven Product Manager for <span>Sustainability & Learning</span></h1>
-                <p>I build AI-powered products for enterprise Fortune 500 companies worldwide, helping organizations measure sustainability impact and scale employee training. 8 years defining product strategy for sustainability platforms and learning management systems. Expert in discovery, roadmap planning, and translating customer needs into products that drive business outcomes. I lead with empathy, execute with data, and ship with impact.</p>
+                <h1>Data-Driven Product & Program Manager<br><span class="headline-focus">for EHS & Sustainability</span></h1>
+                <p>I build AI-powered products and lead global programs for enterprise Fortune 500 companies worldwide, helping organizations automate EHS compliance, occupational health workflows, and sustainability metrics. 8 years defining strategic roadmaps for global safety, ESG platforms, and enterprise learning management systems. Expert in full-lifecycle deployment, cross-functional leadership, and transforming complex compliance or user needs into risk-mitigating software tools. I lead with empathy, execute with data, and ship with impact.</p>
                 <a href="#projects" class="cta-button">See My Products</a>
                 
                 <div class="metrics">
